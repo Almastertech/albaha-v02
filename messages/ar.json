@@ -53,14 +53,14 @@
       "title": "الرؤية والأهداف",
       "visionsandgolas": [
         {
-          "icon": "/assets/visions_and_goals/rocket-01.svg",
-          "gold_icon": "/assets/visions_and_goals/rocket-01-gold.svg",
+          "icon": "/assets/home/visions_and_goals/rocket-01.svg",
+          "gold_icon": "/assets/home/visions_and_goals/rocket-01-gold.svg",
           "title": "أهدافنا",
           "description": "تعزيز التخطيط الحضري ، متابعة مؤشرات التنمية الإقليمية  ، دعم الجهود الاستثمارية في المنطقة ، بناء الشراكات والاتفاقيات مع القطاعات التنموية بالمنطقة."
         },
         {
-          "icon": "/assets/visions_and_goals/vision.svg",
-          "gold_icon": "/assets/visions_and_goals/vision-gold.svg",
+          "icon": "/assets/home/visions_and_goals/vision.svg",
+          "gold_icon": "/assets/home/visions_and_goals/vision-gold.svg",
           "title": "رؤيتنا",
           "description": "يمثل المرصد الحضري خطوة محورية نحو تحقيق بيئة حضرية مستدامة، ويسهم في رفع جودة الحياة والارتقاء بمستوى الخدمات لسكان منطقة الباحة."
         }
@@ -77,34 +77,34 @@
       "cta": "مشاهدة المزيد",
       "partners_icons": [
         [
-          "/assets/partners/البنك المركزي.svg",
-          "/assets/partners/الثقافة.svg",
-          "/assets/partners/الموار بشرية.svg",
-          "/assets/partners/امانة الباحة.svg"
+          "/assets/home/partners/البنك المركزي.svg",
+          "/assets/home/partners/الثقافة.svg",
+          "/assets/home/partners/الموار بشرية.svg",
+          "/assets/home/partners/امانة الباحة.svg"
         ],
         [
-          "/assets/partners/شعار وزارة الإعلام SVG 1.svg",
-          "/assets/partners/شعار وزارة الاستثمار SVG 1.svg",
-          "/assets/partners/طيران مدني.svg",
-          "/assets/partners/ملكية فكرية.svg"
+          "/assets/home/partners/شعار وزارة الإعلام SVG 1.svg",
+          "/assets/home/partners/شعار وزارة الاستثمار SVG 1.svg",
+          "/assets/home/partners/طيران مدني.svg",
+          "/assets/home/partners/ملكية فكرية.svg"
         ],
         [
-          "/assets/partners/هاوي.svg",
-          "/assets/partners/هيئة التراث.svg",
-          "/assets/partners/Frame 2608703.svg",
-          "/assets/partners/Group-2.svg"
+          "/assets/home/partners/هاوي.svg",
+          "/assets/home/partners/هيئة التراث.svg",
+          "/assets/home/partners/Frame 2608703.svg",
+          "/assets/home/partners/Group-2.svg"
         ],
         [
-          "/assets/partners/General_Entertainment_Authority_Logo 1.svg",
-          "/assets/partners/Group-1.svg",
-          "/assets/partners/Group-3.svg",
-          "/assets/partners/l-m 1.svg"
+          "/assets/home/partners/General_Entertainment_Authority_Logo 1.svg",
+          "/assets/home/partners/Group-1.svg",
+          "/assets/home/partners/Group-3.svg",
+          "/assets/home/partners/l-m 1.svg"
         ],
         [
-          "/assets/partners/Group.svg",
-          "/assets/partners/Frame 2608707.svg",
-          "/assets/partners/Group-2.svg",
-          "/assets/partners/Frame 2608707.svg"
+          "/assets/home/partners/Group.svg",
+          "/assets/home/partners/Frame 2608707.svg",
+          "/assets/home/partners/Group-2.svg",
+          "/assets/home/partners/Frame 2608707.svg"
         ]
       ]
     }

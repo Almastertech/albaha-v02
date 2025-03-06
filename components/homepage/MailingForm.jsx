@@ -1,6 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
-import BtnIcon from "../../public/assets/mailing_list/Button-Main-5.svg";
+import BtnIcon from "../../public/assets/home/mailing_list/Button-Main-5.svg";
 
 function MailingForm({ data }) {
   const path = usePathname();

@@ -77,6 +77,7 @@ const Logo = () => (
       height={100}
       width={200}
       quality={100}
+      priority
     />
   </Link>
 );
