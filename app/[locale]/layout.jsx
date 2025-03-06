@@ -1,5 +1,5 @@
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "./globals.css";
@@ -17,15 +17,14 @@ export default async function LocaleLayout({ children, params }) {
   }
 
   const messages = await getMessages();
-
   return (
     <html lang={locale} dir={locale.includes("ar") ? "rtl" : "ltr"}>
-      <body className="relative">
-        <Navbar />
-        <NextIntlClientProvider messages={messages}>
+      <NextIntlClientProvider messages={messages}>
+        <body className="relative">
+          <Navbar />
           {children}
-        </NextIntlClientProvider>
-      </body>
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 }

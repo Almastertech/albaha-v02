@@ -8,53 +8,16 @@ import DownArrowIcon from "../public/assets/navbar/arrow-down-01.svg";
 
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-
-const nav_data = [
-  {
-    title: "الرؤية والأهداف",
-    subnavs: [
-      { title: "المكتب الإستراتيجي لتطوير منطقة الباحة", href: "#" },
-      { title: "المرصد الحضري لمنطقة الباحة", href: "#" },
-      { title: "فريق العمل", href: "#" },
-      { title: "طلب البيانات", href: "#" },
-      { title: "إدارة المحتوى", href: "#" },
-      { title: "شركائنا", href: "#" },
-    ],
-  },
-  {
-    title: "الجغرافيا والمكان",
-    subnavs: [
-      { title: "منطقة الباحة", href: "#" },
-      { title: "محافظة العقيق", href: "#" },
-      { title: "محافظة الحجره", href: "#" },
-      { title: "محافظة المخواة", href: "#" },
-      { title: "محافظة المندق", href: "#" },
-      { title: "محافظة بالجرشي", href: "#" },
-      { title: "محافظة بني حسن", href: "#" },
-      { title: "محافظة غامد الزناد", href: "#" },
-      { title: "ملفات التحميل", href: "#" },
-      { title: "محافظة القرى", href: "#" },
-    ],
-  },
-  {
-    title: "المؤشرات الحضرية لمنطقة الباحة",
-    subnavs: [{ title: "المؤشرات الحضرية لمنطقة الباحة", href: "#" }],
-  },
-  {
-    title: "أخبار المرصد",
-    subnavs: [
-      { title: "الأخبار", href: "#" },
-      { title: "الصور والفيديوهات", href: "#" },
-      { title: "مكتبة المرصد", href: "#" },
-    ],
-  },
-];
+import { useTranslations } from "use-intl";
 
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const [showContainer, setShowContainer] = useState(false);
   const [curNav, setCurNav] = useState([]);
   const [activeIndex, setActiveIndex] = useState(10);
+
+  const t = useTranslations("homepage");
+  const data = t.raw("nav_bar");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +35,7 @@ function Navbar() {
   }, []);
 
   const handleNavItemClick = (index) => {
-    setCurNav(nav_data[index].subnavs);
+    setCurNav(data.nav_data[index].subnavs);
     setActiveIndex(index);
     setShowContainer(true);
   };
@@ -94,10 +57,11 @@ function Navbar() {
       <div className="flex items-center justify-between relative z-50">
         <Logo />
         <Navigations
+          data={data}
           activeIndex={activeIndex}
           handleNavItemClick={handleNavItemClick}
         />
-        <Lang_Search />
+        <Lang_Search data={data} />
       </div>
 
       <NavContainer showContainer={showContainer} curNav={curNav} />
@@ -117,9 +81,9 @@ const Logo = () => (
   </Link>
 );
 
-const Navigations = ({ activeIndex, handleNavItemClick }) => (
+const Navigations = ({ activeIndex, handleNavItemClick, data }) => (
   <ul className="flexify gap-10">
-    {nav_data.map((item, index) => (
+    {data.nav_data.map((item, index) => (
       <NavItem
         key={item.title}
         data={item}
@@ -149,7 +113,7 @@ const NavContainer = ({ showContainer, curNav }) => (
     className={`absolute transition-all duration-300 overflow-hidden bg-[#1E2123] left-0  w-full top-[100%] -z-10  ${
       showContainer ? "opacity-100 h-[300px] " : "h-0 opacity-0 "
     } `}>
-    <ul className={` h-[300px] flex flex-col flex-wrap gap-2 p-10 w-[40%] `}>
+    <ul className={` h-[300px] flex flex-col flex-wrap gap-2 p-10 w-[60%] `}>
       {curNav.map((item, index) => (
         <li
           key={index}
@@ -161,7 +125,7 @@ const NavContainer = ({ showContainer, curNav }) => (
   </div>
 );
 
-const Lang_Search = () => {
+const Lang_Search = ({ data }) => {
   const router = useRouter();
   const path = usePathname();
 
@@ -173,7 +137,7 @@ const Lang_Search = () => {
     <div className="flexify gap-10">
       <SeachIcon className="scale-80" />
       <button className="cursor-pointer" onClick={handleLangSwitch}>
-        الانجليزية
+        {data.lang_switch}
       </button>
     </div>
   );

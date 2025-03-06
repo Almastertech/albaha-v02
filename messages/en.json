@@ -1,5 +1,53 @@
 {
   "homepage": {
+    "nav_bar": {
+      "nav_data": [
+        {
+          "title": "Vision and Goals",
+          "subnavs": [
+            {
+              "title": "The Strategic Office for Al-Baha Region Development",
+              "href": "#"
+            },
+            { "title": "The Urban Observatory of Al-Baha Region", "href": "#" },
+            { "title": "The Team", "href": "#" },
+            { "title": "Data Request", "href": "#" },
+            { "title": "Content Management", "href": "#" },
+            { "title": "Our Partners", "href": "#" }
+          ]
+        },
+        {
+          "title": "Geography and Location",
+          "subnavs": [
+            { "title": "Al-Baha Region", "href": "#" },
+            { "title": "Al-Aqiq Governorate", "href": "#" },
+            { "title": "Al-Hajrah Governorate", "href": "#" },
+            { "title": "Al-Makhwah Governorate", "href": "#" },
+            { "title": "Al-Mandaq Governorate", "href": "#" },
+            { "title": "Baljurashi Governorate", "href": "#" },
+            { "title": "Bani Hassan Governorate", "href": "#" },
+            { "title": "Ghamid Al-Zinad Governorate", "href": "#" },
+            { "title": "Download Files", "href": "#" },
+            { "title": "Al-Qura Governorate", "href": "#" }
+          ]
+        },
+        {
+          "title": "Urban Indicators of Al-Baha Region",
+          "subnavs": [
+            { "title": "Urban Indicators of Al-Baha Region", "href": "#" }
+          ]
+        },
+        {
+          "title": "Observatory News",
+          "subnavs": [
+            { "title": "News", "href": "#" },
+            { "title": "Photos and Videos", "href": "#" },
+            { "title": "Observatory Library", "href": "#" }
+          ]
+        }
+      ],
+      "lang_switch": "Arabic"
+    },
     "hero": {
       "title": "Monitoring Reality with a Future Vision",
       "cta": "Urban Information Platform"
