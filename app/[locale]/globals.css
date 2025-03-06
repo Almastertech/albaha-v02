@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+
+/* Defined a components layer so i could use the @apply to create composable tailwind classes 
+
+==base== For low-level,foundational styles (like resetting <h1>, <button>, etc.).
+==components== For custom,reusable classes (like .btn, .card, .section).
+==utilities== Where all Tailwind’s utility classes live (p-4, text-center, etc.).
+
+@apply lets you define your own composoable classes while @layer lets you define which layer these classes are applied 🤯.
+
+in tailwind v4 you can't use @apply by it's own, so it has to be in a layer.
+
+*/
+@layer components {
+    .p-res {
+        @apply px-[10px] py-[30px] md:px-[30px] md:py-[60px] lg:px-[50px] xl:px-[80px];
+    }
+
+    .flexify {
+        @apply flex items-center justify-center
+    }
+
+    .flexify-col {
+        @apply flex flex-col items-center justify-center
+    }
+}
+
+@font-face {
+    font-family: 'bukra-reg';
+    src: url('/fonts/29LTBukraRegular3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: bukra-reg;
+}
