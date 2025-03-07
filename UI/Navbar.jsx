@@ -49,10 +49,8 @@ function Navbar() {
         setActiveIndex(10);
         setCurNav([]);
       }}
-      className={`fixed transition-all duration-[0.35s] text-sm text-white z-50 top-0 w-full ${
-        showNav
-          ? "bg-[#1E2123]/[0.85] backdrop-blur-2xl px-14 py-6"
-          : "bg-transparent px-20 py-16"
+      className={`fixed transition-all duration-[0.35s]   text-sm px-14  text-white z-50 top-0 w-full ${
+        showNav ? "bg-[#1E2123]/[0.85] backdrop-blur-2xl" : "bg-transparent "
       }`}>
       <div className="flex items-center justify-between relative z-50">
         <Logo />
@@ -83,7 +81,7 @@ const Logo = () => (
 );
 
 const Navigations = ({ activeIndex, handleNavItemClick, data }) => (
-  <ul className="flexify gap-10">
+  <ul className="flexify ">
     {data.nav_data.map((item, index) => (
       <NavItem
         key={item.title}
@@ -98,48 +96,53 @@ const Navigations = ({ activeIndex, handleNavItemClick, data }) => (
 const NavItem = ({ data, isActive, onClick }) => (
   <li
     onClick={onClick}
-    className="flexify gap-2 hover:opacity-80 transition-opacity cursor-pointer select-none">
+    className={`flexify gap-2 hover:opacity-80 border-b-[3px] border-transparent transition-colors cursor-pointer select-none py-10 px-6  ${
+      isActive && "border-white"
+    }`}>
     <span>{data.title}</span>
 
     <DownArrowIcon
       className={`scale-80 transition-transform ${
-        isActive ? "rotate-180" : ""
+        isActive ? "rotate-180 " : ""
       }`}
     />
   </li>
 );
 
-const NavContainer = ({ showContainer, curNav }) => (
-  <div
-    className={`absolute transition-all duration-300 overflow-hidden bg-[#1E2123] left-0  w-full top-[100%] -z-10  ${
-      showContainer ? "opacity-100 h-[300px] " : "h-0 opacity-0 "
-    } `}>
-    <ul className={` h-[300px] flex flex-col flex-wrap gap-2 p-10 w-[60%] `}>
-      {curNav.map((item, index) => (
-        <li
-          key={index}
-          className={`hover:text-[#DED3B3] transition-all cursor-pointer text-lg w-fit `}>
-          <Link href={item.href}>{item.title}</Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+const NavContainer = ({ showContainer, curNav }) => {
+  const path = usePathname();
+  const isEnglish = path.includes("/en");
+  return (
+    <div
+      className={`absolute transition-all duration-300 overflow-hidden bg-[#1E2123] left-0  w-full top-[100%] -z-10  ${
+        showContainer ? "opacity-100 h-[300px] " : "h-0 opacity-0 "
+      } `}>
+      <ul className={` h-[300px] flex flex-col flex-wrap  p-10 px-14 w-[70%] `}>
+        {curNav.map((item, index) => (
+          <li
+            key={index}
+            className={`hover:text-[#DED3B3] transition-all cursor-pointer text-lg w-[50%] border-white/5 ${
+              isEnglish ? "border-r-2" : "border-l-2"
+            } py-1 px-10`}>
+            <Link href={item.href}>{item.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 const Lang_Search = ({ data }) => {
-  const router = useRouter();
   const path = usePathname();
-
-  const handleLangSwitch = () => {
-    router.push(path.startsWith("/ar") ? "/en" : "/ar");
-  };
 
   return (
     <div className="flexify gap-10">
       <SeachIcon className="scale-80" />
-      <button className="cursor-pointer" onClick={handleLangSwitch}>
+      <Link
+        href={path.startsWith("/ar") ? "/en" : "/ar"}
+        className="cursor-pointer">
         {data.lang_switch}
-      </button>
+      </Link>
     </div>
   );
 };

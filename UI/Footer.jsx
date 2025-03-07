@@ -21,7 +21,7 @@ function Footer() {
 
 const FooterTop = ({ sections }) => {
   return (
-    <div className=" md:px-12 md:py-8 flex items-center flex-wrap justify-between">
+    <div className=" md:px-12 md:py-8 border-t-4 border-[#DED3B3] flex items-center flex-wrap justify-between">
       {sections.map((section, index) =>
         !Array.isArray(section) ? (
           <div className="flex flex-wrap items-center" key={section.title}>
