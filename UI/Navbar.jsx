@@ -16,7 +16,7 @@ function Navbar() {
   const [curNav, setCurNav] = useState([]);
   const [activeIndex, setActiveIndex] = useState(10);
 
-  const t = useTranslations("homepage");
+  const t = useTranslations("nav");
   const data = t.raw("nav_bar");
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 {
-  "homepage": {
+  "nav": {
     "nav_bar": {
       "nav_data": [
         {
@@ -47,7 +47,9 @@
         }
       ],
       "lang_switch": "Arabic"
-    },
+    }
+  },
+  "homepage": {
     "hero": {
       "title": "Monitoring Reality with a Future Vision",
       "cta": "Urban Information Platform"
@@ -111,5 +113,60 @@
         ]
       ]
     }
+  },
+  "footer": {
+    "sections": [
+      {
+        "title": "Vision and Goals",
+        "links": [
+          {
+            "text": "Strategic Office for Al-Baha Region Development",
+            "href": "#"
+          },
+          { "text": "Vision and Goals", "href": "#" },
+          { "text": "Urban Observatory for Al-Baha Region", "href": "#" },
+          { "text": "Team", "href": "#" },
+          { "text": "Data Request", "href": "#" },
+          { "text": "Content Management", "href": "#" },
+          { "text": "Our Partners", "href": "#" }
+        ]
+      },
+      {
+        "title": "Geography and Location",
+        "links": [
+          { "text": "Al-Baha Region", "href": "#" },
+          { "text": "Ghamid Al-Zinad Governorate", "href": "#" },
+          { "text": "Al-Aqiq Governorate", "href": "#" },
+          { "text": "Qilwah Governorate", "href": "#" },
+          { "text": "Al-Hajrah Governorate", "href": "#" },
+          { "text": "Al-Makhwah Governorate", "href": "#" },
+          { "text": "Baljurashi Governorate", "href": "#" },
+          { "text": "Al-Mandaq Governorate", "href": "#" },
+          { "text": "Bani Hasan Governorate", "href": "#" }
+        ]
+      },
+      [
+        {
+          "title": "Urban Indicators for Al-Baha Region",
+          "links": [
+            { "text": "Urban Indicators for Al-Baha Region", "href": "#" }
+          ]
+        },
+        {
+          "title": "Observatory Library",
+          "links": [
+            { "text": "Observatory News", "href": "#" },
+            { "text": "Photos and Videos", "href": "#" },
+            { "text": "Observatory Reports", "href": "#" }
+          ]
+        }
+      ]
+    ],
+    "bottom": [
+      { "title": "Privacy Policy", "href": "#" },
+      { "title": "Cookie Policies", "href": "#" },
+      { "title": "Disclaimer Map", "href": "#" }
+    ],
+    "copy": "All rights reserved © The Strategic Office for the Development of Al-Baha Region"
   }
 }

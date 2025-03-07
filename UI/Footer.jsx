@@ -1,0 +1,114 @@
+"use client";
+
+import Link from "next/link";
+import DiamondIcon from "../public/assets/footer/diamond.svg";
+import Image from "next/image";
+import { useTranslations } from "use-intl";
+function Footer() {
+  const t = useTranslations("footer");
+  const sections = t.raw("sections");
+  const bottom = t.raw("bottom");
+  const copy = t.raw("copy");
+
+  return (
+    <footer className="bg-[#232629] text-white text-[14px]">
+      <FooterTop sections={sections} />
+      <FooterMid />
+      <FooterBottom copy={copy} bottom={bottom} />
+    </footer>
+  );
+}
+
+const FooterTop = ({ sections }) => {
+  return (
+    <div className=" md:px-12 md:py-8 flex items-center flex-wrap justify-between">
+      {sections.map((section, index) =>
+        !Array.isArray(section) ? (
+          <div className="flex flex-wrap items-center" key={section.title}>
+            <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
+            <ul className="flex flex-col flex-wrap gap-2 h-[150px] w-[130%]">
+              {section.links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    className="hover:text-[#DED3B3] transition-colors "
+                    href={link.href}>
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <div key={index} className="flex-col flex gap-4">
+            {section.map((item, index) => (
+              <div key={index} className="">
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <ul className="flex flex-col gap-2">
+                  {item.links.map((link, index) => (
+                    <li key={index}>
+                      <Link
+                        className="hover:text-[#DED3B3] transition-colors "
+                        href={link.href}>
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )
+      )}
+    </div>
+  );
+};
+
+const Social = () => {
+  const social_data = [
+    { image: "/assets/footer/facebook.svg", alt: "facebook", href: "#" },
+    { image: "/assets/footer/instagram.svg", alt: "instagram", href: "#" },
+    { image: "/assets/footer/x.svg", alt: "x", href: "#" },
+    { image: "/assets/footer/youtube.svg", alt: "youtube", href: "#" },
+  ];
+  return (
+    <div className="flexify gap-3">
+      {social_data.map((icon) => (
+        <Link href={icon.href} key={icon.alt}>
+          <Image src={icon.image} alt={icon.alt} width={30} height={30} />
+        </Link>
+      ))}
+    </div>
+  );
+};
+
+const FooterMid = () => {
+  return (
+    <div className="flex items-center justify-between w-full md:px-12 md:pb-8   ">
+      <Image
+        src={`/assets/footer/Vector.svg`}
+        alt="Logo"
+        width={200}
+        height={100}
+      />
+      <Social />
+    </div>
+  );
+};
+
+const FooterBottom = ({ copy, bottom }) => {
+  return (
+    <div className="bg-[#1E2123] text-[#B2C1C7] text-[10px] md:px-12 md:py-4 flex items-center justify-between">
+      <div className="flexify gap-3 ">
+        {bottom.map((item, index) => (
+          <Link className="flexify gap-3" href={item.href} key={item.title}>
+            {index !== 0 && <DiamondIcon />}
+
+            <span>{item.title}</span>
+          </Link>
+        ))}
+      </div>
+      <div className="">{copy}</div>
+    </div>
+  );
+};
+export default Footer;

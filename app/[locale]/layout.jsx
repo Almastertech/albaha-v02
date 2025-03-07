@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "./globals.css";
 import Navbar from "@/UI/Navbar";
+import Footer from "@/UI/Footer";
 
 export const metadata = {
   title: "albaha",
@@ -20,9 +21,10 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} dir={locale.includes("ar") ? "rtl" : "ltr"}>
       <NextIntlClientProvider messages={messages}>
-        <body className="relative">
+        <body className="overflow-x-hidden">
           <Navbar />
           {children}
+          <Footer />
         </body>
       </NextIntlClientProvider>
     </html>
