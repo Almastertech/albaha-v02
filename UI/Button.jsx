@@ -1,6 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
-import LeftArrowIcon from "../public/assets/Section footer-navbar/arrow-left.svg";
+import LeftArrowIcon from "../public/assets/footer/arrow-left.svg";
 
 function Button({ children, className }) {
   const path = usePathname();
