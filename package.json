@@ -10,14 +10,16 @@
   },
   "dependencies": {
     "albaha-v02": "file:",
+    "flickity": "^2.3.0",
     "framer-motion": "^12.4.10",
     "i18n": "^0.15.1",
-    "next": "15.2.0",
+    "next": "^15.2.1",
     "next-intl": "^3.26.5",
     "postcss": "^8.5.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-fast-marquee": "^1.6.5"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-flickity-component": "^4.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
