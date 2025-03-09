@@ -96,7 +96,7 @@ const Navigations = ({ activeIndex, handleNavItemClick, data }) => (
 const NavItem = ({ data, isActive, onClick }) => (
   <li
     onClick={onClick}
-    className={`flexify gap-2 hover:opacity-80 border-b-[3px] border-transparent transition-colors cursor-pointer select-none py-10 px-6  ${
+    className={`flexify gap-0 hover:opacity-80 border-b-[3px] border-transparent transition-colors cursor-pointer select-none py-10 px-4  ${
       isActive && "border-white"
     }`}>
     <span>{data.title}</span>
@@ -138,11 +138,11 @@ const Lang_Search = ({ data }) => {
   return (
     <div className="flexify gap-10">
       <SeachIcon className="scale-80" />
-      <Link
-        href={path.startsWith("/ar") ? "/en" : "/ar"}
+      <div
+        // href={path.startsWith("/ar") ? "/en" : "/ar"}
         className="cursor-pointer">
         {data.lang_switch}
-      </Link>
+      </div>
     </div>
   );
 };

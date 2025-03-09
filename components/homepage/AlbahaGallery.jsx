@@ -73,12 +73,12 @@ export const AlbahaGallery = () => {
         </div>
         <button
           onClick={handleNext}
-          className="absolute cursor-pointer right-0 top-0 z-[999]">
+          className="absolute cursor-pointer right-0 top-0 z-[9]">
           <NextIcon />
         </button>
         <button
           onClick={handlePrevious}
-          className="absolute cursor-pointer  left-0 top-0 z-[999]">
+          className="absolute cursor-pointer  left-0 top-0 z-[9]">
           <PrevIcon />
         </button>
       </div>

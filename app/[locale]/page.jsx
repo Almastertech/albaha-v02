@@ -4,6 +4,7 @@ import VisionsAndGoals from "@/components/homepage/VisionsAndGoals";
 import MailingList from "@/components/homepage/MailingList";
 import Partners from "@/components/homepage/Partners";
 import Library from "@/components/homepage/Library";
+import AlbahaStats from "@/components/homepage/AlbahaStats";
 export default function HomePage() {
   const t = useTranslations(`homepage`);
 
@@ -16,6 +17,7 @@ export default function HomePage() {
     <>
       <HomeHero data={hero_data} />
       <VisionsAndGoals data={visions_data} />
+      <AlbahaStats />
       <Partners data={partners_data} />
       <Library />
       <MailingList data={mailing_data} />

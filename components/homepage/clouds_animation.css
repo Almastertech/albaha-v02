@@ -1,0 +1,50 @@
+.cloud {
+    animation: clouds2 70s linear 0s infinite;
+    opacity: 30%;
+    transform: rotate(180deg);
+}
+
+.cloud1 {
+    opacity: 30%;
+    animation: clouds 80s linear 0s infinite;
+}
+
+.cloud2 {
+    opacity: 30%;
+    animation: clouds1 100s linear 0s infinite;
+}
+
+
+@keyframes clouds {
+    from {
+        transform: translateX(-450%) rotate(180deg);
+        opacity: 1%;
+    }
+
+    to {
+        transform: translateX(300%) rotate(180deg);
+        opacity: 50%;
+    }
+}
+
+@keyframes clouds1 {
+    from {
+        transform: translateX(-240%) rotate(180deg);
+        opacity: 1%;
+    }
+
+    to {
+        transform: translateX(300%) rotate(180deg);
+        opacity: 30%;
+    }
+}
+
+@keyframes clouds2 {
+    from {
+        transform: translateX(-300%) rotate(180deg);
+    }
+
+    to {
+        transform: translateX(300%) rotate(180deg);
+    }
+}

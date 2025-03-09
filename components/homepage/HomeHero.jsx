@@ -17,7 +17,7 @@ const Overlay = ({ data }) => {
   return (
     <div className="p-res w-full h-full bg-black/50 absolute left-0 top-0 z-40">
       <div className="flex flex-col justify-end gap-10 h-[80%]">
-        <h1 className="text-white font-bold text-6xl">{data.title}</h1>
+        <h1 className="text-white font-bold text-5xl">{data.title}</h1>
         <Button>{data.cta}</Button>
       </div>
     </div>
