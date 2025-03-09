@@ -1,4 +1,3 @@
-"use client";
 export const Mapping = ({ setCurrentArea, showContent }) => {
   return (
     <div className="w-[550px] h-full absolute left-1/2  transform -translate-x-1/2 -top-6 ">

@@ -1,4 +1,3 @@
-"use client";
 import CountUp from "react-countup";
 import Image from "next/image";
 
@@ -12,7 +11,7 @@ export const StateInfo = ({ data, index }) => {
         <span className="text-white">{data.info}</span>
         <div className="flexify gap-2 text-[#DED3B3]">
           <span className="w-[60px] text-right">
-            <CountUp end={data.number} />
+            <CountUp start={data.number - 5} duration={7} end={data.number} />
           </span>
           <span className="font-bold">{data.unit}</span>
         </div>
