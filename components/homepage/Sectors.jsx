@@ -58,30 +58,202 @@ const diamonds_data = [
     description:
       "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
     position: "top",
-    image: "/assets/home/sectors/Background.png",
+    image: "/assets/home/sectors/water.jpeg",
     info: [
       {
         info: "النمو السنوي في المساحة",
         icon: "/assets/home/sectors/elements.svg",
-        number: 1,
+        number: 31,
         unit: "%",
       },
       {
         info: "فرز النفايات",
         icon: "/assets/home/sectors/elements.svg",
-        number: 1,
+        number: 15,
         unit: "%",
       },
       {
         info: "مستوى تركيز الأوزون",
         icon: "/assets/home/sectors/elements.svg",
-        number: 1,
+        number: 61,
         unit: "جم/م²",
       },
       {
         info: "التغيير في غطاء التشجير",
         icon: "/assets/home/sectors/elements.svg",
-        number: 1,
+        number: 12,
+        unit: "%",
+      },
+      {
+        info: "التلوث الهوائي",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 17,
+        unit: "ديسيبل",
+      },
+      {
+        info: "التلوث الضوضائي",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 23,
+        unit: "ديسيبل",
+      },
+      {
+        info: "مستوى تركيز الجسيمات",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 56,
+        unit: "ميكروغرام/م³",
+      },
+    ],
+  },
+  {
+    title: "الثقافة والتراث",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الابتكار",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "التعليم",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "البنية التحتية",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الرعاية الصحية",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الأمن والسلامة",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "النقل والخدمات اللوجستية",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "استعمالات الأراضي",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "top",
+    image: "/assets/home/sectors/water.jpeg",
+    info: [...sameInfo],
+  },
+  {
+    title: "الاستثمار",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الخصائص الاقتصادية",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الخصائص السكانية والإسكان",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+
+  {
+    title: "الشفافية",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الطاقة",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الاتصالات وتقنية المعلومات",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "الترفيه",
+    description:
+      "تتعلق بحماية الموارد الطبيعية، معالجة التلوث والحفاظ على التنوع البيولوجي لتحقيق تنمية مستدامة",
+    position: "bottom",
+    image: "/assets/home/sectors/Background.png",
+    info: [...sameInfo],
+  },
+  {
+    title: "السياحة",
+    description:
+      "تشير إلى تطوير قطاع السياحة من خلال تعزيز البنية التحتية السياحية والتسويق للوجهات",
+    position: "bottom",
+    image: "/assets/home/sectors/mountain.jpeg",
+    info: [
+      {
+        info: "النمو السنوي في المساحة",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 20,
+        unit: "%",
+      },
+      {
+        info: "فرز النفايات",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 3,
+        unit: "%",
+      },
+      {
+        info: "مستوى تركيز الأوزون",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 67,
+        unit: "جم/م²",
+      },
+      {
+        info: "التغيير في غطاء التشجير",
+        icon: "/assets/home/sectors/elements.svg",
+        number: 34,
         unit: "%",
       },
       {
@@ -104,134 +276,6 @@ const diamonds_data = [
       },
     ],
   },
-  {
-    title: "الثقافة",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الإبتكار",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "التعليم",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "البنية التحتية",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الرعاية الصحية",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الأمن والسلامة",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "النقل",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "التاريخ",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "top",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الثقافة والتراث",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الترفيه",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الشفافية",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الاستثمار",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "الاقتصاد",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "السياحة والإسكان",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "تقنية المعلومات",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
-  {
-    title: "السياحة",
-    description:
-      "تتعلق بحماية الموارد الطبيعية ، معالجة التلوث والحفاظ علي التنوع البيولوجي لتحقيق تنمية مستدامة",
-    position: "bottom",
-    image: "/assets/home/sectors/Background.png",
-    info: [...sameInfo],
-  },
 ];
 
 function Sectors() {
@@ -251,7 +295,7 @@ function Sectors() {
           <div
             onClick={handleReset}
             className="absolute left-30 top-30 cursor-pointer z-10">
-            اعادة
+            عودة
           </div>
         )}
 
@@ -338,55 +382,85 @@ const Diamonds = ({
 
   return (
     <div
-      className={`w-full h-full pb-20 transform transition-all duration-300 absolute flex flex-col items-ceneter ${
+      className={`w-full h-full pb-20 transform transition-all duration-[0.7s] absolute flexify  ${
         activateAnimation
           ? selectedDiamond?.position === "top"
             ? "translate-y-30"
             : selectedDiamond?.position === "bottom"
             ? "-translate-y-50"
-            : "translate-y-0"
-          : "translate-y-0"
+            : "-translate-y-26"
+          : "-translate-y-14"
       }  justify-center transition-all duration-300`}
       ref={ref}>
       <div
-        className={`absolute transition-all duration-300 left-0 transform flexify flex-wrap`}>
-        {diamonds_data.map((item, index) => (
-          <Diamond
-            setSelectedDiamond={setSelectedDiamond}
-            key={index}
-            data={item}
-            activateAnimation={activateAnimation}
-            isActive={
-              item?.title === selectedDiamond?.title &&
-              selectedDiamond?.position
-            }
-          />
-        ))}
+        className={`absolute transition-all w-full duration-300 left-0 transform flexify`}>
+        {diamonds_data
+          .filter((item) => item.position === "top")
+          .map((item, index) => (
+            <Diamond
+              setSelectedDiamond={setSelectedDiamond}
+              key={index}
+              data={item}
+              activateAnimation={activateAnimation}
+              selectedDiamond={selectedDiamond}
+              isActive={item?.title === selectedDiamond?.title}
+            />
+          ))}
+      </div>
+      <div
+        className={`absolute transition-all w-full  ml-0 mt-40 duration-300 left-0 transform flexify`}>
+        {diamonds_data
+          .filter((item) => item.position === "bottom")
+          .map((item, index) => (
+            <Diamond
+              setSelectedDiamond={setSelectedDiamond}
+              key={index}
+              data={item}
+              activateAnimation={activateAnimation}
+              selectedDiamond={selectedDiamond}
+              isActive={item?.title === selectedDiamond?.title}
+            />
+          ))}
       </div>
     </div>
   );
 };
 
-const Diamond = ({ data, activateAnimation, setSelectedDiamond, isActive }) => (
+const Diamond = ({
+  data,
+  activateAnimation,
+  selectedDiamond,
+  setSelectedDiamond,
+  isActive,
+}) => (
   <motion.div
+    key={selectedDiamond ? selectedDiamond.title : "default"}
     onClick={() => {
       setSelectedDiamond(data);
     }}
-    initial={{ y: data.position === "top" ? -110 : 110 }}
+    initial={
+      !selectedDiamond ? { y: data.position === "top" ? -100 : 100 } : false
+    }
     animate={activateAnimation && { y: 0 }}
     transition={{ duration: 1, delay: 0.4 }}
-    className={`relative w-[120px] h-[120px] mx-6 transform transition-all ease-out ${
+    className={`relative cursor-pointer xl:w-[120px] xl:h-[120px] lg:w-[90px] lg:h-[90px] mx-6 transform transition-all duration-[0.5s] ease-out ${
       data.position === "bottom"
         ? "-my-12 hover:translate-y-3"
         : "hover:-translate-y-3"
     }`}>
     <div
-      className={`absolute transition-colors duration-300 inset-0 rotate-45 border-4 border-[#DED3B3] scale-75 ${
-        isActive && "bg-black"
+      className={`absolute transition-all duration-300 inset-0 rotate-45 border-4 border-[#DED3B3] scale-75 ${
+        selectedDiamond ? (isActive ? "bg-black" : "opacity-30") : "opacity-100"
       }`}></div>
 
     <div
-      className={`absolute inset-0 flex items-center justify-center  text-center `}>
+      className={`absolute inset-0 ${
+        selectedDiamond
+          ? isActive
+            ? "opacity-100"
+            : "opacity-50"
+          : "opacity-100"
+      } flex items-center justify-center  text-center `}>
       <p className="text-white text-sm p-4">{data.title}</p>
     </div>
   </motion.div>
@@ -396,10 +470,10 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
   if (selectedDiamond)
     return (
       <div
-        className={`w-full h-fit p-20 py-0 flex flex-col gap-8  transform transition-all duration-300 absolute ${
+        className={`w-full h-fit p-20 py-0 flex flex-col gap-8  transform transition-all duration-[0.7s] absolute ${
           activateAnimation
             ? selectedDiamond?.position === "top"
-              ? "translate-y-12"
+              ? "translate-y-20"
               : selectedDiamond?.position === "bottom"
               ? "translate-y-80"
               : "hidden"

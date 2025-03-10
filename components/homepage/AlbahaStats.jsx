@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
 import LineTitle from "@/UI/LineTitle";
@@ -16,7 +16,8 @@ import { albaha_states_data, default_states_data } from "./albaha_states_data";
 export default function AlbahaStats() {
   const [showContent, setShowContent] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const [currentArea, setCurrentArea] = useState("");
+  const [clickedArea, setClickedArea] = useState(null);
+  const [currentArea, setCurrentArea] = useState(null);
   const [currentAreaInfo, setCurrentAreaInfo] = useState(null);
   const videoRef = useRef(null);
 
@@ -34,11 +35,16 @@ export default function AlbahaStats() {
   };
 
   useEffect(() => {
-    const areaItem = albaha_states_data.find(
-      (item) => item.state === currentArea
+    const areaItem = albaha_states_data.find((item) =>
+      clickedArea ? item.state === clickedArea : item.state === currentArea
     );
     setCurrentAreaInfo(areaItem || null);
-  }, [currentArea]);
+  }, [currentArea, clickedArea]);
+
+  useEffect(() => {
+    console.log("current Area: ", currentArea);
+    console.log("clicked Area: ", clickedArea);
+  }, [currentArea, clickedArea]);
 
   return (
     <section className="w-full h-screen">
@@ -77,7 +83,10 @@ export default function AlbahaStats() {
                   key={state.state}
                   initial={{ opacity: 0 }}
                   animate={{
-                    opacity: state.state === currentArea ? 1 : 0,
+                    opacity:
+                      state.state === currentArea || state.state === clickedArea
+                        ? 1
+                        : 0,
                     transition: { duration: 0.5 },
                   }}
                   exit={{
@@ -101,21 +110,60 @@ export default function AlbahaStats() {
           </AnimatePresence>
         )}
         <ContentOverlay
+          setClickedArea={setClickedArea}
           setCurrentArea={setCurrentArea}
           currentAreaInfo={currentAreaInfo}
           showContent={showContent}
+          currentArea={currentArea}
         />
       </div>
     </section>
   );
 }
 
-const ContentOverlay = ({ setCurrentArea, currentAreaInfo, showContent }) => {
+const ContentOverlay = ({
+  setCurrentArea,
+  currentAreaInfo,
+  currentArea,
+  showContent,
+  setClickedArea,
+}) => {
+  const containerRef = useRef(null);
+
+  // Click handler: Reset state unless clicking on an excluded element
+  const handleClick = useCallback(
+    (event) => {
+      // Check if clicked element or its parents have the 'data-ignore-click' attribute
+      if (
+        containerRef.current &&
+        containerRef.current.contains(event.target) &&
+        !event.target.closest("[data-ignore-click]")
+      ) {
+        console.log("Clicked inside the element, resetting state.");
+        setClickedArea(null);
+      }
+    },
+    [setClickedArea]
+  );
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [handleClick]);
   return (
-    <div className="w-full h-full  absolute text-white /20 pt-26 p-10 flex flex-col z-[9]">
+    <div
+      ref={containerRef}
+      className="w-full h-full  absolute text-white /20 pt-26 p-10 flex flex-col z-[9]">
       <div className="w-full h-full flex flex-col gap-8 px-10 relative">
         <LineTitle className={`mx-30 `}>بيانات منطقة الباحة</LineTitle>
-        <Mapping showContent={showContent} setCurrentArea={setCurrentArea} />
+        <Mapping
+          currentArea={currentArea}
+          setClickedArea={setClickedArea}
+          showContent={showContent}
+          setCurrentArea={setCurrentArea}
+        />
         {currentAreaInfo ? (
           <motion.div
             className="flex items-center justify-between w-full h-fit mt-20"
@@ -163,8 +211,9 @@ const ContentOverlay = ({ setCurrentArea, currentAreaInfo, showContent }) => {
             </motion.div>
           )
         )}
-
-        {showContent && <Button>مشاهدة المزيد</Button>}
+        <div data-ignore-click>
+          {showContent && <Button>مشاهدة المزيد</Button>}
+        </div>
       </div>
     </div>
   );
