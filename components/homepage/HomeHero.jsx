@@ -3,7 +3,7 @@ import HeroVideo from "./HomeVideo";
 
 function HomeHero({ data }) {
   return (
-    <section className="relative h-screen overflow-hidden w-full flexify z-10">
+    <section className="snap-start relative h-screen overflow-hidden w-full flexify z-10">
       <HeroVideo
         videoSrc="/assets/home/hero/MainBannerVideo.mp4"
         fallbackImage="/assets/home/hero/hero.webp"

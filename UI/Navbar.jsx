@@ -10,29 +10,13 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useTranslations } from "use-intl";
 
-function Navbar() {
-  const [showNav, setShowNav] = useState(false);
+function Navbar({ showNav, setShowNav }) {
   const [showContainer, setShowContainer] = useState(false);
   const [curNav, setCurNav] = useState([]);
   const [activeIndex, setActiveIndex] = useState(10);
 
   const t = useTranslations("nav");
   const data = t.raw("nav_bar");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-        setShowContainer(false);
-        setActiveIndex(10);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleNavItemClick = (index) => {
     setCurNav(data.nav_data[index].subnavs);

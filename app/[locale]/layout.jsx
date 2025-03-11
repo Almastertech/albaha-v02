@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import "./globals.css";
 import Navbar from "@/UI/Navbar";
 import Footer from "@/UI/Footer";
+import ScrollableArea from "@/UI/ScrollableArea";
 
 export const metadata = {
   title: "albaha",
@@ -21,10 +22,8 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} dir={locale.includes("ar") ? "rtl" : "ltr"}>
       <NextIntlClientProvider messages={messages}>
-        <body className="overflow-x-hidden">
-          <Navbar />
-          {children}
-          <Footer />
+        <body className="overflow-x-hidden ">
+          <ScrollableArea>{children}</ScrollableArea>
         </body>
       </NextIntlClientProvider>
     </html>

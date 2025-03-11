@@ -286,9 +286,9 @@ function Sectors() {
   };
 
   return (
-    <section className="  text-white relative flex flex-col gap-10 h-screen s-10">
+    <section className="snap-start  text-white relative flex flex-col gap-10 h-screen s-10">
       <div className="relative w-full h-full z-30 bg-black/50">
-        <LineTitle className={`m-24 mx-50 mb-0 z-30`}>
+        <LineTitle className={`m-24 mt-30 mx-50 mb-0 z-30`}>
           القطاعات التنموية
         </LineTitle>
         {selectedDiamond && (
