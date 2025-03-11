@@ -336,8 +336,8 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation }) => {
               alt="background"
               fill
               priority
-              objectFit="cover"
               quality={100}
+              className="object-cover"
             />
           </motion.div>
         )}
@@ -357,7 +357,7 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation }) => {
               alt={diamond.title}
               fill
               priority
-              objectFit="cover"
+              className="object-cover"
               quality={100}
             />
           </motion.div>

@@ -137,7 +137,7 @@ const Lang_Search = ({ data }) => {
 
   return (
     <div className="flexify gap-10">
-      <SeachIcon className="scale-80" />
+      {/* <SeachIcon className="scale-80" /> */}
       <div
         // href={path.startsWith("/ar") ? "/en" : "/ar"}
         className="cursor-pointer">

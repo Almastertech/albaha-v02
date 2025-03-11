@@ -11,7 +11,7 @@ function Footer() {
   const copy = t.raw("copy");
 
   return (
-    <footer className="bg-[#232629] text-white text-[14px]">
+    <footer className="bg-[#232629] text-white text-[13px]">
       <FooterTop sections={sections} />
       <FooterMid />
       <FooterBottom copy={copy} bottom={bottom} />
@@ -21,11 +21,11 @@ function Footer() {
 
 const FooterTop = ({ sections }) => {
   return (
-    <div className=" md:px-12 md:py-8 border-t-4 border-[#DED3B3] flex items-center flex-wrap justify-between">
+    <div className=" md:px-12 md:py-8 md:pb-4 border-t-4 border-[#DED3B3] flex items-center flex-wrap justify-between">
       {sections.map((section, index) =>
         !Array.isArray(section) ? (
           <div className="flex flex-wrap items-center" key={section.title}>
-            <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
+            <h3 className="text-xl font-bold mb-4">{section.title}</h3>
             <ul className="flex flex-col flex-wrap gap-2 h-[150px] w-[130%]">
               {section.links.map((link, index) => (
                 <li key={index}>
@@ -42,7 +42,7 @@ const FooterTop = ({ sections }) => {
           <div key={index} className="flex-col flex gap-4">
             {section.map((item, index) => (
               <div key={index} className="">
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
                 <ul className="flex flex-col gap-2">
                   {item.links.map((link, index) => (
                     <li key={index}>
@@ -71,7 +71,7 @@ const Social = () => {
     { image: "/assets/footer/youtube.svg", alt: "youtube", href: "#" },
   ];
   return (
-    <div className="flexify gap-3">
+    <div className="flexify self-end gap-3">
       {social_data.map((icon) => (
         <Link href={icon.href} key={icon.alt}>
           <Image src={icon.image} alt={icon.alt} width={30} height={30} />
@@ -83,7 +83,7 @@ const Social = () => {
 
 const FooterMid = () => {
   return (
-    <div className="flex items-center justify-between w-full md:px-12 md:pb-8   ">
+    <div className="flex items-center justify-between w-full md:px-12 md:pb-4   ">
       <Image
         src={`/assets/footer/Vector.svg`}
         alt="Logo"
@@ -97,7 +97,7 @@ const FooterMid = () => {
 
 const FooterBottom = ({ copy, bottom }) => {
   return (
-    <div className="bg-[#1E2123] text-[#B2C1C7] text-[10px] md:px-12 md:py-4 flex items-center justify-between">
+    <div className="bg-[#1E2123] text-[#B2C1C7] text-[10px] md:px-12 md:py-2 flex items-center justify-between">
       <div className="flexify gap-3 ">
         {bottom.map((item, index) => (
           <Link className="flexify gap-3" href={item.href} key={item.title}>

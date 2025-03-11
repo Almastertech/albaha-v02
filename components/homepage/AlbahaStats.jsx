@@ -41,11 +41,6 @@ export default function AlbahaStats() {
     setCurrentAreaInfo(areaItem || null);
   }, [currentArea, clickedArea]);
 
-  useEffect(() => {
-    console.log("current Area: ", currentArea);
-    console.log("clicked Area: ", clickedArea);
-  }, [currentArea, clickedArea]);
-
   return (
     <section className="w-full h-screen">
       <div
@@ -130,16 +125,13 @@ const ContentOverlay = ({
 }) => {
   const containerRef = useRef(null);
 
-  // Click handler: Reset state unless clicking on an excluded element
   const handleClick = useCallback(
     (event) => {
-      // Check if clicked element or its parents have the 'data-ignore-click' attribute
       if (
         containerRef.current &&
         containerRef.current.contains(event.target) &&
         !event.target.closest("[data-ignore-click]")
       ) {
-        console.log("Clicked inside the element, resetting state.");
         setClickedArea(null);
       }
     },

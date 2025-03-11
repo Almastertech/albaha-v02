@@ -6,6 +6,7 @@ import Flickity from "react-flickity-component";
 import "flickity/css/flickity.css";
 
 import "./library.css";
+import Link from "next/link";
 
 export const AlbahaReports = () => {
   const flickityOptions = {
@@ -33,11 +34,14 @@ export const AlbahaReports = () => {
         disableImagesLoaded={false}
         reloadOnUpdate>
         {[...Array(15)].map((_, index) => (
-          <div key={index} className="px-5 text-lg font-bold">
+          <Link
+            href={`#`}
+            key={index}
+            className="px-5 hover:text-blue-600 hover:underline transition-colors duration-300 cursor-pointer text-lg font-bold">
             {" "}
             تقارير اقتصادية عن <br />
             منطقة الباحة 2025
-          </div>
+          </Link>
         ))}
       </Flickity>
     </div>
