@@ -66,7 +66,7 @@ const FooterTop = ({ sections }) => {
 const Social = () => {
   const social_data = [
     { image: "/assets/footer/facebook.svg", alt: "facebook", href: "#" },
-    { image: "/assets/footer/instagram.svg", alt: "instagram", href: "#" },
+
     { image: "/assets/footer/x.svg", alt: "x", href: "#" },
     { image: "/assets/footer/youtube.svg", alt: "youtube", href: "#" },
   ];

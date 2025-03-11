@@ -286,7 +286,7 @@ function Sectors() {
   };
 
   return (
-    <section className="snap-start  text-white relative flex flex-col gap-10 h-screen s-10">
+    <section className="snap-start  text-white relative flex flex-col gap-0 h-screen s-10">
       <div className="relative w-full h-full z-30 bg-black/50">
         <LineTitle className={`m-24 mt-30 mx-50 mb-0 z-30`}>
           القطاعات التنموية
@@ -470,7 +470,7 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
   if (selectedDiamond)
     return (
       <div
-        className={`w-full h-fit p-20 py-0 flex flex-col gap-8  transform transition-all duration-[0.7s] absolute ${
+        className={`w-full h-fit p-20 py-0 flex flex-col gap-0  transform transition-all duration-[0.7s] absolute ${
           activateAnimation
             ? selectedDiamond?.position === "top"
               ? "translate-y-20"
@@ -479,18 +479,18 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
               : "hidden"
             : "hidden"
         }  transition-all duration-300`}>
-        <div className="flexify self-start gap-4">
+        <div className="flexify self-start gap-4 mb-4">
           <span className="text-[#DED3B3] font-bold">
             {selectedDiamond.title}
           </span>
           <p className="">{selectedDiamond.description}</p>
         </div>
-        <div className="flex items-start h-[160px] flex-col flex-wrap gap-2">
+        <div className="flex items-start h-[160px]  flex-wrap">
           {selectedDiamond?.info.map((item, index) => (
             <StateInfo key={index} data={item} />
           ))}
         </div>
-        <Button>مشاهدة المزيد</Button>
+        <Button className={`mt-3`}>مشاهدة المزيد</Button>
       </div>
     );
   else return;

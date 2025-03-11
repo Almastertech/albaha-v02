@@ -33,9 +33,30 @@ in tailwind v4 you can't use @apply by it's own, so it has to be in a layer.
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'dubai-reg';
+    src: url('/fonts/Dubai-Medium.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bukra-reg';
+    src: url('/fonts/29LTBukraRegular3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bukra-reg';
+    src: url('/fonts/29LTBukraRegular3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
-    font-family: bukra-reg;
+    font-family: dubai-reg;
 }
 
 main,

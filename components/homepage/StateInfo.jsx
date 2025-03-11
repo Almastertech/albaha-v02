@@ -1,9 +1,9 @@
 import CountUp from "react-countup";
 import Image from "next/image";
 
-export const StateInfo = ({ data, index }) => {
+export const StateInfo = ({ data }) => {
   return (
-    <div className="flexify gap-2">
+    <div className="flexify gap-2 mx-6">
       <div>
         <Image src={data.icon} alt={data.info} width={30} height={30} />
       </div>

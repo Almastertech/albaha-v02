@@ -22,7 +22,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} dir={locale.includes("ar") ? "rtl" : "ltr"}>
       <NextIntlClientProvider messages={messages}>
-        <body className="overflow-x-hidden ">
+        <body className="overflow-x-hidden text-xl">
           <ScrollableArea>{children}</ScrollableArea>
         </body>
       </NextIntlClientProvider>
