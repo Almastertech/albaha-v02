@@ -1,6 +1,6 @@
 export const albaha_states_data = [
   {
-    image: "/assets/home/stats/albaha_states/akik.jpeg",
+    image: "/assets/home/stats/albaha_states/العقيق.png",
     state: "akik",
     state_info: [
       {
@@ -30,7 +30,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/baha.jpeg",
+    image: "/assets/home/stats/albaha_states/الباحة.png",
     state: "baha",
     state_info: [
       {
@@ -60,7 +60,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/balgarshy.jpeg",
+    image: "/assets/home/stats/albaha_states/بلجراشي.png",
     state: "balghrshy",
     state_info: [
       {
@@ -90,7 +90,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/banyhasan.jpeg",
+    image: "/assets/home/stats/albaha_states/بني حسن.png",
     state: "banyhasan",
     state_info: [
       {
@@ -120,7 +120,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/ghamedelzanad.jpeg",
+    image: "/assets/home/stats/albaha_states/غامد الزناد.png",
     state: "ghamed",
     state_info: [
       {
@@ -150,7 +150,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/hogra.jpeg",
+    image: "/assets/home/stats/albaha_states/الحجرة.png",
     state: "hogra",
     state_info: [
       {
@@ -180,7 +180,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/kalwa.jpeg",
+    image: "/assets/home/stats/albaha_states/قلوة.png",
     state: "kalwa",
     state_info: [
       {
@@ -210,7 +210,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/koray.jpeg",
+    image: "/assets/home/stats/albaha_states/القري.png",
     state: "kora",
     state_info: [
       {
@@ -240,7 +240,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/mahkwa.jpeg",
+    image: "/assets/home/stats/albaha_states/المخواة.png",
     state: "makhwa",
     state_info: [
       {
@@ -270,7 +270,7 @@ export const albaha_states_data = [
     ],
   },
   {
-    image: "/assets/home/stats/albaha_states/mandak.jpeg",
+    image: "/assets/home/stats/albaha_states/المندق.png",
     state: "mandak",
     state_info: [
       {

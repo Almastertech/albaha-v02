@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       <HomeHero data={hero_data} />
-      <VisionsAndGoals data={visions_data} />
+      {/* <VisionsAndGoals data={visions_data} /> */}
       <AlbahaStats />
       <Sectors />
       <Partners data={partners_data} />

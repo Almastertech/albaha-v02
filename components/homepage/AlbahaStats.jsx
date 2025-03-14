@@ -64,7 +64,7 @@ export default function AlbahaStats() {
                 exit={{ opacity: 1, transition: { duration: 0.5 } }}
                 className="absolute inset-0">
                 <Image
-                  src={`/assets/home/stats/statsbackground.jpeg`}
+                  src={`/assets/home/stats/albaha_states/background.png`}
                   alt="background"
                   fill
                   priority
