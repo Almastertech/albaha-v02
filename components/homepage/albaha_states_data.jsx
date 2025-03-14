@@ -2,6 +2,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/العقيق.png",
     state: "akik",
+    name: { english: "Al Aqiq", arabic: "العقيق" },
     state_info: [
       {
         info: "المساحة",
@@ -32,6 +33,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/الباحة.png",
     state: "baha",
+    name: { english: "Al Baha", arabic: "الباحة" },
     state_info: [
       {
         info: "المساحة",
@@ -62,6 +64,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/بلجراشي.png",
     state: "balghrshy",
+    name: { english: "Baljurashi", arabic: "بلجراشي" },
     state_info: [
       {
         info: "المساحة",
@@ -92,6 +95,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/بني حسن.png",
     state: "banyhasan",
+    name: { english: "Bani Hasan", arabic: "بني حسن" },
     state_info: [
       {
         info: "المساحة",
@@ -122,6 +126,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/غامد الزناد.png",
     state: "ghamed",
+    name: { english: "Ghamid Al-Zinad", arabic: "غامد الزناد" },
     state_info: [
       {
         info: "المساحة",
@@ -152,6 +157,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/الحجرة.png",
     state: "hogra",
+    name: { english: "Al Hujrah", arabic: "الحجرة" },
     state_info: [
       {
         info: "المساحة",
@@ -182,6 +188,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/قلوة.png",
     state: "kalwa",
+    name: { english: "Qilwah", arabic: "قلوة" },
     state_info: [
       {
         info: "المساحة",
@@ -212,6 +219,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/القري.png",
     state: "kora",
+    name: { english: "Al Qura", arabic: "القري" },
     state_info: [
       {
         info: "المساحة",
@@ -242,6 +250,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/المخواة.png",
     state: "makhwa",
+    name: { english: "Al Makhwah", arabic: "المخواة" },
     state_info: [
       {
         info: "المساحة",
@@ -272,6 +281,7 @@ export const albaha_states_data = [
   {
     image: "/assets/home/stats/albaha_states/المندق.png",
     state: "mandak",
+    name: { english: "Al Mandaq", arabic: "المندق" },
     state_info: [
       {
         info: "المساحة",

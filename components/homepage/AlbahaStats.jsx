@@ -68,7 +68,7 @@ export default function AlbahaStats() {
                   alt="background"
                   fill
                   priority
-                  objectFit="cover"
+                  className="object-cover object-center"
                   quality={100}
                 />
               </motion.div>
@@ -94,7 +94,7 @@ export default function AlbahaStats() {
                     alt=""
                     fill
                     priority
-                    objectFit="cover"
+                    className="object-cover object-center"
                     quality={100}
                   />
                 </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import { albaha_states_data } from "./albaha_states_data";
 export const Mapping = ({
   setCurrentArea,
   showContent,
@@ -9,7 +9,7 @@ export const Mapping = ({
 }) => {
   const [temp, setTemp] = useState(null);
   return (
-    <div className="w-[550px] h-full absolute left-1/2  transform -translate-x-1/2 -top-6 ">
+    <div className="w-[550px]  h-full absolute left-[50%]  transform -translate-x-1/2 -top-6 text-sm font-obld">
       {showContent && (
         <div className="relative">
           <div
@@ -26,7 +26,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute hogra left-7 top-60 w-[100px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  hogra left-7 top-60 w-[100px] h-[100px] cursor-pointer ">
+            {
+              albaha_states_data.find((item) => item.state === "hogra").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -42,7 +47,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute mandak left-40 top-[210px] w-[50px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  mandak left-40 top-[210px] w-[50px] h-[100px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "mandak").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -58,7 +68,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute kora left-40 top-[100px] w-[100px] h-[150px] cursor-pointer"></div>
+            className="absolute flexify  kora left-40 top-[100px] w-[100px] h-[150px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "kora").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -74,7 +89,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute akik left-60 top-[130px] w-[150px] h-[150px] cursor-pointer"></div>
+            className="absolute flexify  akik left-60 top-[130px] w-[150px] h-[150px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "akik").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -90,7 +110,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute banyhasan left-50 top-[250px] w-[50px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  banyhasan left-[190px] top-[270px] w-[50px] h-[100px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "banyhasan").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -106,7 +131,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute kalwa left-20 top-80 w-[100px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  kalwa left-20 top-80 w-[100px] h-[100px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "kalwa").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -122,7 +152,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute makhwa left-44 top-100 w-[100px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  makhwa left-44 top-100 w-[100px] h-[100px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "makhwa").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -138,7 +173,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute ghamed left-60 top-120 w-[100px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  ghamed left-60 top-120 w-[100px] h-[100px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "ghamed").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -154,7 +194,13 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute balghrshy left-80 top-90 w-[100px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  balghrshy left-80 top-90 w-[100px] h-[100px] cursor-pointer">
+            {" "}
+            {
+              albaha_states_data.find((item) => item.state === "balghrshy").name
+                .arabic
+            }
+          </div>
 
           <div
             onClick={() => {
@@ -170,7 +216,12 @@ export const Mapping = ({
               setCurrentArea(null);
               setClickedArea(temp);
             }}
-            className="absolute baha left-64 top-80 w-[50px] h-[100px] cursor-pointer"></div>
+            className="absolute flexify  baha left-64 top-80 w-[50px] h-[100px] cursor-pointer">
+            {
+              albaha_states_data.find((item) => item.state === "baha").name
+                .arabic
+            }
+          </div>
         </div>
       )}
     </div>
