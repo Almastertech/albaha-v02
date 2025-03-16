@@ -14,7 +14,7 @@ export const StatsBackgroundVideo = ({
           <motion.video
             ref={videoRef}
             className="relative w-full h-full object-cover"
-            src="/assets/home/stats/WhatsApp Video 2025-03-04 at 12.48.45 PM.mp4"
+            src="/assets/home/stats/stats_video.mp4"
             playsInline
             muted
             onTimeUpdate={onVideoEnd}
