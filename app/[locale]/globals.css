@@ -58,9 +58,3 @@ in tailwind v4 you can't use @apply by it's own, so it has to be in a layer.
     box-sizing: border-box;
     font-family: dubai-reg;
 }
-
-main,
-body,
-html {
-    scrollbar-width: none;
-}

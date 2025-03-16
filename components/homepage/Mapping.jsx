@@ -9,7 +9,7 @@ export const Mapping = ({
 }) => {
   const [temp, setTemp] = useState(null);
   return (
-    <div className="w-[550px]  h-full absolute left-[50%]  transform -translate-x-1/2 -top-6 text-sm font-obld">
+    <div className="w-[550px]  h-full absolute left-[50%]  transform -translate-x-1/2 -top-0  text-sm font-obld">
       {showContent && (
         <div className="relative">
           <div

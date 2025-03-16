@@ -1,6 +1,7 @@
 import { AlbahaReports } from "./AlbahaReports";
 
 import { AlbahaGallery } from "./AlbahaGallery";
+import { AlbahaNews } from "./AlbahaNews";
 
 function Library() {
   return (
@@ -12,13 +13,5 @@ function Library() {
     </section>
   );
 }
-
-const AlbahaNews = () => {
-  return (
-    <section className="w-full px-12  text-white p-6 border-b-2 border-[#DED3B3] overflow-hidden">
-      <h3 className="text-2xl font-bold mb-0">أخبار المرصد</h3>
-    </section>
-  );
-};
 
 export default Library;

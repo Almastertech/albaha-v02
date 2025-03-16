@@ -21,9 +21,9 @@ export const AlbahaReports = () => {
   };
 
   return (
-    <div className="w-full px-12   flex flex-col gap-10">
+    <div className="w-full px-12   flex flex-col gap-4">
       <div className="w-full flex items-center justify-between">
-        <h3 className="text-2xl font-bold mb-4">تقارير المرصد </h3>
+        <h3 className="text-2xl font-bold ">تقارير المرصد </h3>
         <Button>مشاهدة المزيد</Button>
       </div>
 

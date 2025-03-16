@@ -42,7 +42,7 @@ export default function AlbahaStats() {
   }, [currentArea, clickedArea]);
 
   return (
-    <section className="w-full h-screen snap-start">
+    <section className="w-full h-screen snap-start bg-[#333] pt-10">
       <div
         ref={ref}
         className="relative w-full h-screen flex justify-center items-center ">
@@ -147,7 +147,7 @@ const ContentOverlay = ({
   return (
     <div
       ref={containerRef}
-      className="w-full h-full  absolute text-white /20 pt-26 p-10 flex flex-col z-[9]">
+      className="w-full h-full  absolute text-white /20 pt-18 p-10 flex flex-col z-[9]">
       <div className="w-full h-full flex flex-col gap-8 px-10 relative">
         <LineTitle className={`mx-30  mt-10 `}>بيانات منطقة الباحة</LineTitle>
         <Mapping

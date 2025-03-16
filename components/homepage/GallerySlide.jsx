@@ -10,7 +10,7 @@ export const GallerySlide = ({ data, index, setActiveSlide, Isactive }) => {
       <div
         className={`overflow-hidden ${
           Isactive ? "w-[500px]" : "w-[200px]"
-        } h-[300px] transition-all ease-in-out duration-[0.35s]`}>
+        } h-[250px] transition-all ease-in-out duration-[0.35s]`}>
         <Image
           src={data.image}
           alt={data.title}
