@@ -4,7 +4,7 @@ import LineTitle from "@/UI/LineTitle";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { act, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "@/UI/Button";
 import { StateInfo } from "./StateInfo";
 
@@ -278,9 +278,17 @@ const diamonds_data = [
   },
 ];
 
-function Sectors() {
+function Sectors({ data }) {
   const [activateAnimation, setActivateAnimation] = useState(false);
   const [selectedDiamond, setSelectedDiamond] = useState(null);
+  // const [temp, setTemp] = useState(data);
+  const temp = data;
+
+  useEffect(() => {
+    console.log(temp);
+    console.log(typeof temp);
+  }, []);
+
   const handleReset = () => {
     setSelectedDiamond(null);
   };
@@ -289,6 +297,7 @@ function Sectors() {
     <section className="snap-start  text-white relative flex flex-col gap-0 h-screen s-10">
       <div className="relative w-full h-full z-30 bg-black/50">
         <LineTitle className={`m-24 mt-30 mx-50 mb-0 z-30`}>
+          {temp?.fixedData[70]?.id}
           القطاعات التنموية
         </LineTitle>
         {selectedDiamond && (
