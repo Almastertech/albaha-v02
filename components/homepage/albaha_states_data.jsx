@@ -3,27 +3,27 @@ export const albaha_states_data = [
     image: "/assets/home/stats/albaha_states/العقيق.png",
     state: "akik",
     name: { english: "Al Aqiq", arabic: "العقيق" },
-    state_info: [
+    state_name: [
       {
-        info: "المساحة",
+        name: "المساحة",
         icon: "/assets/home/stats/maping.svg",
         number: 1303,
         unit: "كم²",
       },
       {
-        info: "إجمالي أطوال الطرق",
+        name: "إجمالي أطوال الطرق",
         icon: "/assets/home/stats/road-01.svg",
         number: 1553,
         unit: "كم",
       },
       {
-        info: "عدد السكان",
+        name: "عدد السكان",
         icon: "/assets/home/stats/user-square.svg",
         number: 51787,
         unit: "نسمة",
       },
       {
-        info: "عدد المدارس",
+        name: "عدد المدارس",
         icon: "/assets/home/stats/school.svg",
         number: 139,
         unit: "مدرسة",
@@ -34,27 +34,27 @@ export const albaha_states_data = [
     image: "/assets/home/stats/albaha_states/الباحة.png",
     state: "baha",
     name: { english: "Al Baha", arabic: "الباحة" },
-    state_info: [
+    state_name: [
       {
-        info: "المساحة",
+        name: "المساحة",
         icon: "/assets/home/stats/maping.svg",
         number: 1303,
         unit: "كم²",
       },
       {
-        info: "إجمالي أطوال الطرق",
+        name: "إجمالي أطوال الطرق",
         icon: "/assets/home/stats/road-01.svg",
         number: 1553,
         unit: "كم",
       },
       {
-        info: "عدد السكان",
+        name: "عدد السكان",
         icon: "/assets/home/stats/user-square.svg",
         number: 51787,
         unit: "نسمة",
       },
       {
-        info: "عدد المدارس",
+        name: "عدد المدارس",
         icon: "/assets/home/stats/school.svg",
         number: 139,
         unit: "مدرسة",
@@ -65,27 +65,27 @@ export const albaha_states_data = [
     image: "/assets/home/stats/albaha_states/بلجراشي.png",
     state: "balghrshy",
     name: { english: "Baljurashi", arabic: "بلجراشي" },
-    state_info: [
+    state_name: [
       {
-        info: "المساحة",
+        name: "المساحة",
         icon: "/assets/home/stats/maping.svg",
         number: 1303,
         unit: "كم²",
       },
       {
-        info: "إجمالي أطوال الطرق",
+        name: "إجمالي أطوال الطرق",
         icon: "/assets/home/stats/road-01.svg",
         number: 1553,
         unit: "كم",
       },
       {
-        info: "عدد السكان",
+        name: "عدد السكان",
         icon: "/assets/home/stats/user-square.svg",
         number: 51787,
         unit: "نسمة",
       },
       {
-        info: "عدد المدارس",
+        name: "عدد المدارس",
         icon: "/assets/home/stats/school.svg",
         number: 139,
         unit: "مدرسة",
@@ -313,45 +313,45 @@ export const albaha_states_data = [
 
 export const default_states_data = [
   {
-    info: "عدد السجلات التجارية",
+    name: "عدد السجلات التجارية",
     icon: "/assets/home/stats/archive-02.svg",
-    number: 153341,
+    value: 153341,
     unit: "سجل",
   },
   {
-    info: "حجم الإنفاق على تطوير البنية التحتية للطرق",
+    name: "حجم الإنفاق على تطوير البنية التحتية للطرق",
     icon: "/assets/home/stats/road-01.svg",
-    number: 87,
+    value: 87,
     unit: "مليون ريال سعودي",
   },
   {
-    info: "عدد الفرص الاستثمارية",
+    name: "عدد الفرص الاستثمارية",
     icon: "/assets/home/stats/chart-average.svg",
-    number: 441,
+    value: 441,
     unit: "فرصة",
   },
   {
-    info: "حجم صفقات نقاط البيع",
+    name: "حجم صفقات نقاط البيع",
     icon: "/assets/home/stats/pie-chart.svg",
-    number: 2.8,
+    value: 2.8,
     unit: "مليار ريال سعودي",
   },
   {
-    info: "حجم إنتاج العسل",
+    name: "حجم إنتاج العسل",
     icon: "/assets/home/stats/spaghetti.svg",
-    number: 1000,
+    value: 1000,
     unit: "طن تقريبا",
   },
   {
-    info: "حجم إنتاج الرمان",
+    name: "حجم إنتاج الرمان",
     icon: "/assets/home/stats/spaghetti.svg",
-    number: 30,
+    value: 30,
     unit: "طن",
   },
   {
-    info: "عدد المواقع التراثية",
+    name: "عدد المواقع التراثية",
     icon: "/assets/home/stats/maping.svg",
-    number: 129,
+    value: 129,
     unit: "موقع",
   },
 ];
