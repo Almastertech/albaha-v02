@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import BtnIcon from "../../public/assets/home/mailing_list/Button-Main-5.svg";
 
-function MailingForm({ data }) {
+function MailingForm() {
   const path = usePathname();
   return (
     <form className="flexify w-full mt-10">
@@ -10,7 +10,7 @@ function MailingForm({ data }) {
         <input
           type="email"
           required
-          placeholder={data.placeholder}
+          placeholder="إدخل بريــــدك الإلــــــكتـــرونـي للإشـــتــــراك"
           className="bg-white text-black w-full focus:outline-none px-4 py-1"
         />
         <button

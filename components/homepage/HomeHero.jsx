@@ -22,9 +22,7 @@ const Overlay = ({ data }) => {
           {data.find((item) => item.id === "Video-Title")?.content1}
         </h1>
         <Link href={`http://34.166.121.10:7009/`} target="blank">
-          <Button>
-            {data.find((item) => item.id === "Dashboard-Menu")?.content1}
-          </Button>
+          <Button>منصة المعلومات الحضرية</Button>
         </Link>
       </div>
     </div>

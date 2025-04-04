@@ -13,7 +13,7 @@ import { CloudsLayer } from "./CloudsLayer";
 import { Mapping } from "./Mapping";
 import { albaha_states_data, default_states_data } from "./albaha_states_data";
 
-export default function AlbahaStats() {
+export default function AlbahaStats({ data }) {
   const [showContent, setShowContent] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [clickedArea, setClickedArea] = useState(null);
@@ -22,13 +22,13 @@ export default function AlbahaStats() {
   const videoRef = useRef(null);
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
-
+  const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
   if (inView && videoRef.current) {
     videoRef.current.play().catch((e) => console.warn("Autoplay failed", e));
   }
 
   const handleTimeUpdate = () => {
-    if (videoRef.current.currentTime >= 13 && !fadeOut) {
+    if (videoRef.current.currentTime >= 1 && !fadeOut) {
       setFadeOut(true);
       setShowContent(true);
     }
@@ -73,13 +73,14 @@ export default function AlbahaStats() {
                 />
               </motion.div>
 
-              {albaha_states_data.map((state) => (
+              {data.map((state) => (
                 <motion.div
-                  key={state.state}
+                  key={state.name.arabic}
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity:
-                      state.state === currentArea || state.state === clickedArea
+                      state.name.arabic === currentArea ||
+                      state.name.arabic === clickedArea
                         ? 1
                         : 0,
                     transition: { duration: 0.5 },
@@ -90,7 +91,7 @@ export default function AlbahaStats() {
                   }}
                   className="absolute inset-0">
                   <Image
-                    src={state.image}
+                    src={`${files_path}${state.url}`}
                     alt=""
                     fill
                     priority

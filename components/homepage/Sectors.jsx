@@ -278,6 +278,8 @@ const diamonds_data = [
   },
 ];
 
+const FILES_PATH = process.env.NEXT_PUBLIC_FILES_PATH;
+
 function Sectors({ data }) {
   const [activateAnimation, setActivateAnimation] = useState(false);
   const [selectedDiamond, setSelectedDiamond] = useState(null);
@@ -347,22 +349,23 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation, data }) => {
 
         {data.map((diamond) => (
           <motion.div
-            key={diamond.name1}
+            key={diamond.name.arabic}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: diamond.name1 === selectedDiamond?.name1 ? 1 : 0,
+              opacity:
+                diamond.name.arabic === selectedDiamond?.name.arabic ? 1 : 0,
               transition: { duration: 0.5 },
             }}
             exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.2 } }}
             className="absolute inset-0 z-10">
-            {/* <Image
-              src={diamond?.picUrl}
-              alt={diamond.name1}
+            <Image
+              src={`${FILES_PATH}${diamond.picUrl}`}
+              alt={diamond.name.arabic}
               fill
               priority
               className="object-cover"
               quality={100}
-            /> */}
+            />
           </motion.div>
         ))}
       </motion.div>
@@ -405,7 +408,7 @@ const Diamonds = ({
             data={item}
             activateAnimation={activateAnimation}
             selectedDiamond={selectedDiamond}
-            isActive={item?.name1 === selectedDiamond?.name1}
+            isActive={item?.name.arabic === selectedDiamond?.name.arabic}
           />
         ))}
       </div>
@@ -418,7 +421,7 @@ const Diamonds = ({
             data={item}
             activateAnimation={activateAnimation}
             selectedDiamond={selectedDiamond}
-            isActive={item?.name1 === selectedDiamond?.name1}
+            isActive={item?.name.arabic === selectedDiamond?.name.arabic}
           />
         ))}
       </div>
@@ -434,7 +437,7 @@ const Diamond = ({
   isActive,
 }) => (
   <motion.div
-    key={selectedDiamond ? selectedDiamond.name1 : "default"}
+    key={selectedDiamond ? selectedDiamond.name.arabic : "default"}
     onClick={() => {
       setSelectedDiamond(data);
     }}
@@ -457,7 +460,7 @@ const Diamond = ({
             : "opacity-50"
           : "opacity-100"
       } flex items-center justify-center  text-center `}>
-      <p className="text-white text-sm p-4">{data.name1}</p>
+      <p className="text-white text-sm p-4">{data.name.arabic}</p>
     </div>
   </motion.div>
 );
@@ -479,15 +482,18 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
         }  transition-all duration-300`}>
         <div className="flexify self-start gap-4 mb-4">
           <span className="text-[#DED3B3] font-bold">
-            {selectedDiamond.name1}
+            {selectedDiamond.name.arabic}
           </span>
           <p className="">{selectedDiamond.description1}</p>
         </div>
-        <div className="flex items-start h-[160px]  flex-wrap">
-          {selectedDiamond?.sectorIndicators.map((item, index) => (
-            <StateInfo key={index} data={item} />
-          ))}
-        </div>
+        {selectedDiamond.sectorIndicators.length > 0 && (
+          <div className="flex items-start h-[160px]  flex-wrap">
+            {selectedDiamond?.sectorIndicators.map((item, index) => (
+              <StateInfo key={index} data={item} />
+            ))}
+          </div>
+        )}
+
         <Button className={`mt-3`}>مشاهدة المزيد</Button>
       </motion.div>
     );

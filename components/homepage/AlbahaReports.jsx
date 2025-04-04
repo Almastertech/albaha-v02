@@ -6,19 +6,25 @@ import Flickity from "react-flickity-component";
 import "flickity/css/flickity.css";
 
 import "./library.css";
-import Link from "next/link";
 
-export const AlbahaReports = () => {
+const FILES_PATH = process.env.NEXT_PUBLIC_FILES_PATH;
+
+export const AlbahaReports = ({ data }) => {
   const flickityOptions = {
     initialIndex: 4,
     wrapAround: true,
-    autoPlay: 3000,
+    autoPlay: 2000,
     freeScroll: false,
     pauseAutoPlayOnHover: true,
     pageDots: false,
     prevNextButtons: true,
     contain: false,
   };
+
+  let dup_reports = [];
+  for (let i = 0; i <= 2; i++) {
+    dup_reports = [...dup_reports, ...data];
+  }
 
   return (
     <div className="w-full px-12   flex flex-col gap-4">
@@ -33,15 +39,15 @@ export const AlbahaReports = () => {
         options={flickityOptions}
         disableImagesLoaded={false}
         reloadOnUpdate>
-        {[...Array(15)].map((_, index) => (
-          <Link
-            href={`#`}
+        {dup_reports.map((item, index) => (
+          <a
+            rel="noopener noreferrer"
+            href={`${FILES_PATH}${item.file}`}
             key={index}
-            className="px-5 hover:text-blue-600 hover:underline transition-colors duration-300 cursor-pointer text-lg font-bold">
-            {" "}
-            تقارير اقتصادية عن <br />
-            منطقة الباحة 2025
-          </Link>
+            target="_blank"
+            className="px-5 grow hover:text-blue-600 hover:underline transition-colors duration-300 cursor-pointer text-lg font-bold">
+            {item.name1}
+          </a>
         ))}
       </Flickity>
     </div>

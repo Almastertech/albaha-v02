@@ -3,8 +3,21 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const VerticalMarquee = ({ speed = 8, data }) => {
+const FILES_PATH = process.env.NEXT_PUBLIC_FILES_PATH;
+
+const VerticalMarquee = ({ speed = 20, data }) => {
   const duplicatedItems = [...data, ...data];
+  function chunkIcons(data, chunkSize = 4) {
+    const logos = data.map((item) => item.logo1).filter(Boolean); // only non-empty logos
+    const chunks = [];
+
+    for (let i = 0; i < logos.length; i += chunkSize) {
+      chunks.push(logos.slice(i, i + chunkSize));
+    }
+
+    return chunks;
+  }
+  const modified_data = chunkIcons(duplicatedItems);
 
   return (
     <div className="overflow-hidden w-full h-70 relative flex flex-col items-center">
@@ -17,7 +30,7 @@ const VerticalMarquee = ({ speed = 8, data }) => {
           ease: "linear",
           repeat: Infinity,
         }}>
-        {duplicatedItems.map((item, index) => (
+        {modified_data.map((item, index) => (
           <div
             key={index}
             className=" flex items-center justify-between w-full gap-30 my-3">
@@ -25,7 +38,12 @@ const VerticalMarquee = ({ speed = 8, data }) => {
               <div
                 key={index}
                 className=" flex items-center justify-between w-full">
-                <Image src={subitem} alt="" width={200} height={100} />
+                <Image
+                  src={`${FILES_PATH}${subitem}`}
+                  alt=""
+                  width={200}
+                  height={100}
+                />
               </div>
             ))}
           </div>
