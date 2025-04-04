@@ -7,8 +7,8 @@ import SeachIcon from "../public/assets/navbar/search.svg";
 import DownArrowIcon from "../public/assets/navbar/arrow-down-01.svg";
 
 import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
 import { useTranslations } from "use-intl";
+import { Link } from "@/i18n/navigation";
 
 function Navbar({ showNav, setShowNav }) {
   const [showContainer, setShowContainer] = useState(false);
@@ -108,7 +108,9 @@ const NavContainer = ({ showContainer, curNav }) => {
             className={`hover:text-[#DED3B3] transition-all cursor-pointer text-lg w-[50%] border-white/5 ${
               isEnglish ? "border-r-2" : "border-l-2"
             } py-1 px-10`}>
-            <Link href={item.href}>{item.title}</Link>
+            <Link target={item.target && item.target} href={item.href}>
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>

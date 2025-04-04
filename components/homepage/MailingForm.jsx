@@ -63,7 +63,9 @@ function MailingForm() {
           {!loading ? (
             <button
               onClick={() => handleSubmit}
-              className={`  ${path.includes("/en") && "rotate-180"}`}>
+              className={` cursor-pointer ${
+                path.includes("/en") && "rotate-180"
+              }`}>
               <BtnIcon />
             </button>
           ) : (
@@ -78,7 +80,7 @@ function MailingForm() {
         </div>
       )}
       {error && (
-        <div className="bg-red-500  text-black font-normal px-6   py-0 rounded-lg ">
+        <div className="bg-red-400  text-black font-normal px-6   py-0 rounded-lg ">
           {error}
         </div>
       )}

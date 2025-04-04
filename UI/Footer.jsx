@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import DiamondIcon from "../public/assets/footer/diamond.svg";
 import Image from "next/image";
 import { useTranslations } from "use-intl";
@@ -30,6 +30,7 @@ const FooterTop = ({ sections }) => {
               {section.links.map((link, index) => (
                 <li key={index}>
                   <Link
+                    target={link.target && link.target}
                     className="hover:text-[#DED3B3] transition-colors "
                     href={link.href}>
                     {link.text}
@@ -47,6 +48,7 @@ const FooterTop = ({ sections }) => {
                   {item.links.map((link, index) => (
                     <li key={index}>
                       <Link
+                        target={link.target && link.target}
                         className="hover:text-[#DED3B3] transition-colors "
                         href={link.href}>
                         {link.text}
