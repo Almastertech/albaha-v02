@@ -18,9 +18,13 @@ const Overlay = ({ data }) => {
   return (
     <div className="p-res w-full h-full bg-black/50 absolute left-0 top-0 z-40">
       <div className="flex flex-col justify-end gap-10 h-[80%]">
-        <h1 className="text-white font-bold text-5xl">{data.title}</h1>
+        <h1 className="text-white font-bold text-5xl">
+          {data.find((item) => item.id === "Video-Title")?.content1}
+        </h1>
         <Link href={`http://34.166.121.10:7009/`} target="blank">
-          <Button>{data.cta}</Button>
+          <Button>
+            {data.find((item) => item.id === "Dashboard-Menu")?.content1}
+          </Button>
         </Link>
       </div>
     </div>

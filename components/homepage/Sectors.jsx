@@ -281,13 +281,6 @@ const diamonds_data = [
 function Sectors({ data }) {
   const [activateAnimation, setActivateAnimation] = useState(false);
   const [selectedDiamond, setSelectedDiamond] = useState(null);
-  // const [temp, setTemp] = useState(data);
-  const temp = data;
-
-  useEffect(() => {
-    console.log(temp);
-    console.log(typeof temp);
-  }, []);
 
   const handleReset = () => {
     setSelectedDiamond(null);
@@ -297,7 +290,6 @@ function Sectors({ data }) {
     <section className="snap-start  text-white relative flex flex-col gap-0 h-screen s-10">
       <div className="relative w-full h-full z-30 bg-black/50">
         <LineTitle className={`m-24 mt-30 mx-50 mb-0 z-30`}>
-          {temp?.fixedData[70]?.id}
           القطاعات التنموية
         </LineTitle>
         {selectedDiamond && (
@@ -309,6 +301,7 @@ function Sectors({ data }) {
         )}
 
         <Diamonds
+          data={data}
           activateAnimation={activateAnimation}
           selectedDiamond={selectedDiamond}
           setSelectedDiamond={setSelectedDiamond}
@@ -320,6 +313,7 @@ function Sectors({ data }) {
         />
       </div>
       <SectoresBackground
+        data={data}
         selectedDiamond={selectedDiamond}
         activateAnimation={activateAnimation}
       />
@@ -327,7 +321,7 @@ function Sectors({ data }) {
   );
 }
 
-const SectoresBackground = ({ selectedDiamond, activateAnimation }) => {
+const SectoresBackground = ({ selectedDiamond, activateAnimation, data }) => {
   return (
     <AnimatePresence>
       <motion.div className="absolute inset-0 flex justify-center items-center bg-[#333]">
@@ -351,24 +345,24 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation }) => {
           </motion.div>
         )}
 
-        {diamonds_data.map((diamond) => (
+        {data.map((diamond) => (
           <motion.div
-            key={diamond.title}
+            key={diamond.name1}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: diamond.title === selectedDiamond?.title ? 1 : 0,
+              opacity: diamond.name1 === selectedDiamond?.name1 ? 1 : 0,
               transition: { duration: 0.5 },
             }}
             exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.2 } }}
             className="absolute inset-0 z-10">
-            <Image
-              src={diamond.image}
-              alt={diamond.title}
+            {/* <Image
+              src={diamond?.picUrl}
+              alt={diamond.name1}
               fill
               priority
               className="object-cover"
               quality={100}
-            />
+            /> */}
           </motion.div>
         ))}
       </motion.div>
@@ -381,6 +375,7 @@ const Diamonds = ({
   setSelectedDiamond,
   activateAnimation,
   setActivateAnimation,
+  data,
 }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
   useEffect(() => {
@@ -393,9 +388,9 @@ const Diamonds = ({
     <div
       className={`w-full h-full pb-20 transform transition-all duration-[0.7s] absolute flexify  ${
         activateAnimation
-          ? selectedDiamond?.position === "top"
+          ? selectedDiamond?.order <= 9
             ? "translate-y-30"
-            : selectedDiamond?.position === "bottom"
+            : selectedDiamond?.order > 9
             ? "-translate-y-50"
             : "-translate-y-26"
           : "-translate-y-14"
@@ -403,33 +398,29 @@ const Diamonds = ({
       ref={ref}>
       <div
         className={`absolute transition-all w-full duration-300 left-0 transform flexify`}>
-        {diamonds_data
-          .filter((item) => item.position === "top")
-          .map((item, index) => (
-            <Diamond
-              setSelectedDiamond={setSelectedDiamond}
-              key={index}
-              data={item}
-              activateAnimation={activateAnimation}
-              selectedDiamond={selectedDiamond}
-              isActive={item?.title === selectedDiamond?.title}
-            />
-          ))}
+        {data.slice(0, 9).map((item, index) => (
+          <Diamond
+            setSelectedDiamond={setSelectedDiamond}
+            key={index}
+            data={item}
+            activateAnimation={activateAnimation}
+            selectedDiamond={selectedDiamond}
+            isActive={item?.name1 === selectedDiamond?.name1}
+          />
+        ))}
       </div>
       <div
         className={`absolute transition-all w-full  ml-0 mt-40 duration-300 left-0 transform flexify`}>
-        {diamonds_data
-          .filter((item) => item.position === "bottom")
-          .map((item, index) => (
-            <Diamond
-              setSelectedDiamond={setSelectedDiamond}
-              key={index}
-              data={item}
-              activateAnimation={activateAnimation}
-              selectedDiamond={selectedDiamond}
-              isActive={item?.title === selectedDiamond?.title}
-            />
-          ))}
+        {data.slice(9).map((item, index) => (
+          <Diamond
+            setSelectedDiamond={setSelectedDiamond}
+            key={index}
+            data={item}
+            activateAnimation={activateAnimation}
+            selectedDiamond={selectedDiamond}
+            isActive={item?.name1 === selectedDiamond?.name1}
+          />
+        ))}
       </div>
     </div>
   );
@@ -443,19 +434,15 @@ const Diamond = ({
   isActive,
 }) => (
   <motion.div
-    key={selectedDiamond ? selectedDiamond.title : "default"}
+    key={selectedDiamond ? selectedDiamond.name1 : "default"}
     onClick={() => {
       setSelectedDiamond(data);
     }}
-    initial={
-      !selectedDiamond ? { y: data.position === "top" ? -100 : 100 } : false
-    }
+    initial={!selectedDiamond ? { y: data.order <= 9 ? -100 : 100 } : false}
     animate={activateAnimation && { y: 0 }}
     transition={{ duration: 1, delay: 0.4 }}
     className={`relative cursor-pointer xl:w-[120px] xl:h-[120px] lg:w-[90px] lg:h-[90px] mx-6 transform transition-all duration-[0.5s] ease-out ${
-      data.position === "bottom"
-        ? "-my-12 hover:translate-y-3"
-        : "hover:-translate-y-3"
+      data.order > 9 ? "-my-12 hover:translate-y-3" : "hover:-translate-y-3"
     }`}>
     <div
       className={`absolute transition-all duration-300 inset-0 rotate-45 border-4 border-[#DED3B3] scale-75 ${
@@ -470,7 +457,7 @@ const Diamond = ({
             : "opacity-50"
           : "opacity-100"
       } flex items-center justify-center  text-center `}>
-      <p className="text-white text-sm p-4">{data.title}</p>
+      <p className="text-white text-sm p-4">{data.name1}</p>
     </div>
   </motion.div>
 );
@@ -478,29 +465,31 @@ const Diamond = ({
 const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
   if (selectedDiamond)
     return (
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         className={`w-full h-fit p-20 py-0 flex flex-col gap-0  transform transition-all duration-[0.7s] absolute ${
           activateAnimation
-            ? selectedDiamond?.position === "top"
+            ? selectedDiamond?.order <= 9
               ? "translate-y-20"
-              : selectedDiamond?.position === "bottom"
+              : selectedDiamond?.order > 9
               ? "translate-y-80"
               : "hidden"
             : "hidden"
         }  transition-all duration-300`}>
         <div className="flexify self-start gap-4 mb-4">
           <span className="text-[#DED3B3] font-bold">
-            {selectedDiamond.title}
+            {selectedDiamond.name1}
           </span>
-          <p className="">{selectedDiamond.description}</p>
+          <p className="">{selectedDiamond.description1}</p>
         </div>
         <div className="flex items-start h-[160px]  flex-wrap">
-          {selectedDiamond?.info.map((item, index) => (
+          {selectedDiamond?.sectorIndicators.map((item, index) => (
             <StateInfo key={index} data={item} />
           ))}
         </div>
         <Button className={`mt-3`}>مشاهدة المزيد</Button>
-      </div>
+      </motion.div>
     );
   else return;
 };

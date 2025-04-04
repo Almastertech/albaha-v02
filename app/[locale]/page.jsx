@@ -9,8 +9,7 @@ import { useTranslations } from "next-intl";
 export default async function HomePage() {
   const res = await fetch("http://34.166.121.10:3000/api/home", {
     headers: {
-      apiKey:
-        "Marsad_Albaha_Z02QjoSF1SlvGgBehTcWb38DEr0skhwq3xfcQGqvHkYBOhTY8iyIWqpBYAGYGjzVECp6V314xmC3BybT6DSAF2BjeTe0vQEWZ3ufdFrFpA4xeZKaPJ",
+      apiKey: process.env.NEXT_PUBLIC_API_KEY,
     },
   });
   const data = await res.json();
@@ -23,11 +22,11 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* <HomeHero data={hero_data} /> */}
+      <HomeHero data={data?.fixedData} />
       {/* <VisionsAndGoals data={visions_data} /> */}
-      <AlbahaStats />
-      <Sectors data={data} />
-      {/* <Partners data={partners_data} /> */}
+      <AlbahaStats data={data?.govs} />
+      <Sectors data={data?.sectors} />
+      {/* <Partners data={data?.partners} /> */}
       <Library />
       {/* <MailingList data={mailing_data} /> */}
     </>
