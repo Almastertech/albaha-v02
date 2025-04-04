@@ -43,6 +43,7 @@ const VerticalMarquee = ({ speed = 20, data }) => {
                   alt=""
                   width={200}
                   height={100}
+                  unoptimized
                 />
               </div>
             ))}

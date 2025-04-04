@@ -70,6 +70,7 @@ export default function AlbahaStats({ data }) {
                   priority
                   className="object-cover object-center"
                   quality={100}
+                  unoptimized
                 />
               </motion.div>
 
@@ -92,11 +93,12 @@ export default function AlbahaStats({ data }) {
                   className="absolute inset-0">
                   <Image
                     src={`${files_path}${state.url}`}
-                    alt=""
+                    alt={state.name.arabic || "state name"}
                     fill
                     priority
                     className="object-cover object-center"
                     quality={100}
+                    unoptimized
                   />
                 </motion.div>
               ))}

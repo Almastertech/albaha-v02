@@ -343,6 +343,7 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation, data }) => {
               priority
               quality={100}
               className="object-cover"
+              unoptimized
             />
           </motion.div>
         )}
@@ -365,6 +366,7 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation, data }) => {
               priority
               className="object-cover"
               quality={100}
+              unoptimized
             />
           </motion.div>
         ))}
