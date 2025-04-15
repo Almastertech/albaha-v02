@@ -38,7 +38,7 @@ export function Cards() {
     <div className="bg-[#232629] py-10 rounded-2xl w-full flex flex-col gap-14 shadow-2xl text-white ">
       <h2 className="text-[30px] text-center font-bold">الصور و الفيديوهات</h2>
       <GalleryComp gallery={gallery_slides_data} />
-      <PaginationButton />
+      {/* <PaginationButton /> */}
     </div>
   );
 }

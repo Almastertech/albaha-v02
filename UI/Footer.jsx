@@ -4,6 +4,8 @@ import { Link } from "@/i18n/navigation";
 import DiamondIcon from "../public/assets/footer/diamond.svg";
 import Image from "next/image";
 import { useTranslations } from "use-intl";
+import getData from "@/lib/api";
+import Social from "./Social";
 function Footer() {
   const t = useTranslations("footer");
   const sections = t.raw("sections");
@@ -61,24 +63,6 @@ const FooterTop = ({ sections }) => {
           </div>
         )
       )}
-    </div>
-  );
-};
-
-const Social = () => {
-  const social_data = [
-    { image: "/assets/footer/facebook.svg", alt: "facebook", href: "#" },
-
-    { image: "/assets/footer/x.svg", alt: "x", href: "#" },
-    { image: "/assets/footer/youtube.svg", alt: "youtube", href: "#" },
-  ];
-  return (
-    <div className="flexify self-end gap-3">
-      {social_data.map((icon) => (
-        <Link href={icon.href} key={icon.alt}>
-          <Image src={icon.image} alt={icon.alt} width={30} height={30} />
-        </Link>
-      ))}
     </div>
   );
 };

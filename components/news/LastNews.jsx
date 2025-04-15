@@ -1,6 +1,6 @@
 import Image from "next/image";
-
-export function LastNews() {
+export function LastNews({ data }) {
+  const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
   return (
     <div className="bg-[#363B3E] w-full rounded-2xl p-20">
       <div className="w-full flex justify-center items-center gap-5">
@@ -11,23 +11,19 @@ export function LastNews() {
       <div className="w-full bg-[#232629] rounded-lg overflow-hidden shadow-lg mt-5">
         <div className="relative h-48">
           <Image
-            src="/assets/home/library/photo-1.png"
+            src={`${files_path}${data.pic}`}
             alt="Event Image"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
+            unoptimized
           />
           <div className="bg-[#03242266] text-[25px] absolute bottom-0 w-full bg-opacity-50 text-white text-center py-2">
-            فعاليات اليوم الوطني بالباحة 55
+            {data.name}
           </div>
         </div>
         <div className="p-6 text-white">
-          <p className="text-sm">2025-01-14</p>
-          <p className="mt-2 text-lg">
-            أقيمت في منطقة الباحة فعاليات متنوعة ومميزة جذبت الزوار من مختلف
-            المناطق. من أبرز هذه الفعاليات مهرجان شتاء الباحة 2025 الذي انطلق
-            برعاية أمير المنطقة، متضمنًا أكثر من 280 فعالية متنوعة تناسب جميع
-            أفراد العائلة.
-          </p>
+          <p className="text-sm">{data.start}</p>
+          <p className="mt-2 text-lg">{data.content}</p>
           <button className="mt-4 bg-white text-black py-2 px-4 rounded flex gap-3">
             <span className="text-lg">اقرأ المزيد</span>
             <Image

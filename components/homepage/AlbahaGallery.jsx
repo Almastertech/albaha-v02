@@ -4,6 +4,7 @@ import { useState } from "react";
 import NextIcon from "../../public/assets/home/library/right_arrow.svg";
 import PrevIcon from "../../public/assets/home/library/left_arrow.svg";
 import { GallerySlide } from "./GallerySlide";
+import { Link } from "@/i18n/navigation";
 
 export const AlbahaGallery = () => {
   const gallery_slides_data = [
@@ -43,7 +44,10 @@ export const AlbahaGallery = () => {
     <div className="w-full px-12 flex flex-col gap-2">
       <div className="w-full flex items-center justify-between">
         <h3 className="text-2xl font-bold mb-4">صور وفيدوهات المرصد</h3>
-        <Button>مشاهدة المزيد</Button>
+        <Button>
+          {" "}
+          <Link href={"/images"}>مشاهدة المزيد</Link>
+        </Button>
       </div>
       <GalleryComp gallery={gallery_slides_data} />
     </div>

@@ -6,10 +6,11 @@ import Library from "@/components/homepage/Library";
 import AlbahaStats from "@/components/homepage/AlbahaStats";
 import Sectors from "@/components/homepage/Sectors";
 
-import getHomepageData from "@/lib/api";
+import getData from "@/lib/api";
+
 export default async function HomePage() {
   const { fixedData, govs, sectors, partners, mediaFiles, news } =
-    await getHomepageData();
+    await getData("home");
 
   return (
     <>

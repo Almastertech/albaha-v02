@@ -3,35 +3,52 @@
     "nav_bar": {
       "nav_data": [
         {
-          "title": "الرؤية والأهداف",
+          "title": "عن المرصد الحضري",
           "subnavs": [
             {
               "title": "المكتب الإستراتيجي لتطوير منطقة الباحة",
               "href": "/albaha-page"
             },
-            {
-              "title": "المرصد الحضري لمنطقة الباحة",
-              "href": "/albaha-location"
-            },
+
             { "title": "فريق العمل", "href": "/ourteam" },
-            { "title": "طلب البيانات", "href": "/reports" },
-            { "title": "إدارة المحتوى", "href": "#" },
-            { "title": "شركائنا", "href": "#" }
+            { "title": "طلب البيانات", "href": "/contact" },
+            {
+              "target": "_blank",
+              "title": "إدارة المحتوى",
+              "href": "http://34.166.121.10/Marsad/App"
+            },
+            { "title": "شركائنا", "href": "/#partners" }
           ]
         },
         {
           "title": "الجغرافيا والمكان",
           "subnavs": [
-            { "title": "منطقة الباحة", "href": "#" },
-            { "title": "محافظة العقيق", "href": "#" },
-            { "title": "محافظة الحجره", "href": "#" },
-            { "title": "محافظة المخواة", "href": "#" },
-            { "title": "محافظة المندق", "href": "#" },
-            { "title": "محافظة بالجرشي", "href": "#" },
-            { "title": "محافظة بني حسن", "href": "#" },
-            { "title": "محافظة غامد الزناد", "href": "#" },
-            { "title": "ملفات التحميل", "href": "#" },
-            { "title": "محافظة القرى", "href": "#" }
+            { "title": "منطقة الباحة", "target": "_blank", "href": "/baha" },
+            { "title": "محافظة العقيق", "target": "_blank", "href": "/akik" },
+            { "title": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+            {
+              "title": "محافظة المخواة",
+              "target": "_blank",
+              "href": "/makhwa"
+            },
+            { "title": "محافظة المندق", "target": "_blank", "href": "/mandak" },
+            {
+              "title": "محافظة بالجرشي",
+              "target": "_blank",
+              "href": "/balghrshy"
+            },
+            {
+              "title": "محافظة بني حسن",
+              "target": "_blank",
+              "href": "/banyhasan"
+            },
+            {
+              "title": "محافظة غامد الزناد",
+              "target": "_blank",
+              "href": "/ghamed"
+            },
+            { "title": "محافظة القرى", "target": "_blank", "href": "/kora" },
+            { "title": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
           ]
         },
         {
@@ -39,7 +56,7 @@
           "subnavs": [
             {
               "title": "المؤشرات الحضرية لمنطقة الباحة",
-              "href": "https://app.powerbi.com/view?r=eyJrIjoiNGRjNDJiZTEtMjNlZC00MDBmLWJjZmEtNTJjYjlhM2VjZDMyIiwidCI6IjM0YjQ3MjA0LTY0ZWMtNDY2MS04NzAwLTFiNzA5NWVkODk3NSIsImMiOjl9&pageName=d6cb5edc14ab5b556f37%201",
+              "href": "http://34.166.121.10:7009/",
               "target": "_blank"
             }
           ]
@@ -47,13 +64,13 @@
         {
           "title": "أخبار المرصد",
           "subnavs": [
-            { "title": "الأخبار", "href": "news" },
-            { "title": "الصور والفيديوهات", "href": "images" },
-            { "title": "مكتبة المرصد", "href": "images" }
+            { "title": "الأخبار", "href": "/news" },
+            { "title": "مكتبة المرصد", "href": "/images" },
+            { "title": "ملفات التحميل", "href": "/reports" }
           ]
         }
       ],
-      "lang_switch": "E"
+      "lang_switch": ""
     }
   },
   "homepage": {
@@ -167,32 +184,51 @@
   "footer": {
     "sections": [
       {
-        "title": "الرؤية والأهداف",
+        "title": "عن المرصد الحضري",
         "links": [
           {
             "text": "المكتب الإستراتيجي لتطوير منطقة الباحة",
             "href": "/albaha-page"
           },
-          { "text": "الرؤية والأهداف", "href": "#" },
-          { "text": "المرصد الحضري لمنطقة الباحة", "href": "/albaha-location" },
           { "text": "فريق العمل", "href": "/ourteam" },
-          { "text": "طلب البيانات", "href": "/reports" },
-          { "text": "إدارة المحتوي", "href": "#" },
-          { "text": "شركائنا", "href": "#" }
+          { "text": "طلب البيانات", "href": "/contact" },
+          {
+            "text": "إدارة المحتوي",
+            "href": "http://34.166.121.10/Marsad/App",
+            "target": "_blank"
+          },
+          { "text": "شركائنا", "href": "/#partners" }
         ]
       },
       {
         "title": "الجغرافيا والمكان",
         "links": [
-          { "text": "منطقة الباحة", "href": "#" },
-          { "text": "محافظة غامد الزناد", "href": "#" },
-          { "text": "محافظة العقيق", "href": "#" },
-          { "text": "محافظة قلوة", "href": "#" },
-          { "text": "محافظة الحجرة", "href": "#" },
-          { "text": "محافظة المخواة", "href": "#" },
-          { "text": "محافظة بلجرشي", "href": "#" },
-          { "text": "محافظة المندق", "href": "#" },
-          { "text": "محافظة بني حسن", "href": "#" }
+          { "text": "منطقة الباحة", "target": "_blank", "href": "/baha" },
+          { "text": "محافظة العقيق", "target": "_blank", "href": "/akik" },
+          { "text": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+          {
+            "text": "محافظة المخواة",
+            "target": "_blank",
+            "href": "/makhwa"
+          },
+          { "text": "محافظة المندق", "target": "_blank", "href": "/mandak" },
+          {
+            "text": "محافظة بالجرشي",
+            "target": "_blank",
+            "href": "/balghrshy"
+          },
+          {
+            "text": "محافظة بني حسن",
+            "target": "_blank",
+            "href": "/banyhasan"
+          },
+          {
+            "text": "محافظة غامد الزناد",
+            "target": "_blank",
+            "href": "/ghamed"
+          },
+          { "text": "محافظة القرى", "target": "_blank", "href": "/kora" },
+          { "text": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
         ]
       },
       [
@@ -201,7 +237,7 @@
           "links": [
             {
               "text": "المؤشرات الحضرية لمنطقة الباحة",
-              "href": "https://app.powerbi.com/view?r=eyJrIjoiNGRjNDJiZTEtMjNlZC00MDBmLWJjZmEtNTJjYjlhM2VjZDMyIiwidCI6IjM0YjQ3MjA0LTY0ZWMtNDY2MS04NzAwLTFiNzA5NWVkODk3NSIsImMiOjl9&pageName=d6cb5edc14ab5b556f37%201",
+              "href": "http://34.166.121.10:7009/",
               "target": "_blank"
             }
           ]

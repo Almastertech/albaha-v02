@@ -1,40 +1,34 @@
 import Image from "next/image";
 
 export const TouristDestinations = ({ data }) => {
-  const Info = [
-    { id: 1, h: "عدد السكان", p: "487.108 ألف نسمة" },
-    { id: 2, h: "المساحه", p: "340.28 كم2" },
-    { id: 3, h: "المستشفيات", p: "2 مستشفي" },
-    { id: 4, h: "سعة المستشفي", p: "510 سرير" },
-  ];
   return (
     <>
       <section className="bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/assets/location/AlbahaFagr.jpg')] bg-center bg-cover h-[90vh] flex justify-center items-center gap-10 px-16">
         <div className="basis-[48%] flex flex-col justify-center items-start gap-10">
           <div className="flex flex-col gap-3 text-white">
-            <h2 className="text-2xl">{data.heading1}</h2>
-            <p className="text-lg">{data.desc1}</p>
+            <h2 className="text-2xl">{data.name.arabic}</h2>
+            <p className="text-lg">{data?.description}</p>
           </div>
           <div className="flex flex-col gap-3 text-white">
-            <h2 className="text-2xl">{data.heading2}</h2>
-            <p className="text-lg">{data.desc2}</p>
+            <h2 className="text-2xl">{data?.heading2}</h2>
+            <p className="text-lg">{data?.desc2}</p>
           </div>
-          <div className="flex items-center justify-center gap-12 text-white">
-            {Info.map((info) => (
-              <div key={info.id}>
+          <div className="flex items-center flex-wrap gap-12 text-white">
+            {data.sectorIndicators.map((info) => (
+              <div key={info.id} className="flex flex-col gap-2">
                 <div className="flex items-center gap-3">
-                  <p className="text-lg">{info.h}</p>
-                  <div className="w-5 h-[2px] bg-white rounded-xl"></div>
+                  <p className="text-lg font-bold">{info.name.arabic}</p>
+                  <div className="w-8 h-[2px] bg-white"></div>
                 </div>
-                <p className="text-lg">{info.p}</p>
+                <div className="flex items-center gap-3">
+                  <p className="text-lg">{info.value}</p>
+                  <p className="text-lg">{info.unit1}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="basis-[40%]">
-          <h4 className="text-xl text-white text-center">
-            اهم الوجهات السياحية
-          </h4>
+        <div className="basis-[45%]">
           <div className="w-full relative">
             <Image
               src="/assets/location/Container.png"
@@ -117,9 +111,15 @@ const Areas = () => {
       {areaInfo.map((area) => (
         <div
           key={area.id}
-          className={`absolute ${area.position} border-4 border-[#11504D] rounded-lg h-10 w-14 group`}>
-          <Image src={area.img} alt={area.alt} fill />
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 p-1 rounded-lg bg-[#11504D] transition-opacity opacity-0 group-hover:opacity-100 before:content-[''] before:absolute before:-top-1 before:left-1/2 before:-translate-x-1/2 before:border-l-8 before:border-r-8 before:border-b-8 before:border-l-transparent before:border-r-transparent before:border-b-[#11504D]">
+          className={`absolute ${area.position} border-4 border-[#11504D] rounded-lg h-12 w-16  group `}>
+          <Image
+            src={area.img}
+            alt={area.alt}
+            fill
+            className="object-cover rounded-lg"
+            quality={50}
+          />
+          <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 p-1 rounded-lg bg-[#11504D] transition-opacity opacity-0 group-hover:opacity-100 before:content-[''] before:absolute before:-top-1 before:left-1/2 before:-translate-x-1/2 before:border-l-8 before:border-r-8 before:border-b-8 before:border-l-transparent before:border-r-transparent before:border-b-[#11504D]">
             <p className="text-[12px] text-white text-nowrap">
               {area.areaName}
             </p>

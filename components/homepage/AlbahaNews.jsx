@@ -1,6 +1,6 @@
 "use client";
+import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export const AlbahaNews = ({ data }) => {
   let dup_news = [];
@@ -27,7 +27,7 @@ export const AlbahaNews = ({ data }) => {
           className="flexify w-[180%]  gap-5">
           {dup_news.map((item, index) => (
             <Link
-              href={`#`}
+              href={`/news`}
               className="w-max transition-colors hover:text-blue-600 curosr-pointer hover:underline duration-300 whitespace-nowrap"
               key={index}>
               {item.name}

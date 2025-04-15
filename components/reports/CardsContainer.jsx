@@ -1,73 +1,28 @@
+import { Link } from "@/i18n/navigation";
+import getData from "@/lib/api";
 import Image from "next/image";
 
-export function CardsContainer() {
-  const ourReports = [
-    {
-      id: 1,
-      h4: "تقرير ازدهار المدن",
-      p: "تقرير ازدهار المدن يقيس التنمية الحضرية  والاستدامة لتعزيز النمو وجودة الحياة.",
-      button: "تحميل",
-      history: "2025-01-14",
-    },
-    {
-      id: 2,
-      h4: "المرصد الحضري لمدن استراليا",
-      p: "تقرير يعرض مؤشرات التحضر وجودة الحياة في مدن أستراليا.",
-      button: "تحميل",
-      history: "2025-01-14",
-    },
-    {
-      id: 3,
-      h4: "المرصد الحضري لمدن استراليا",
-      p: "تقرير يعرض مؤشرات التحضر وجودة الحياة في مدن أستراليا.",
-      button: "تحميل",
-      history: "2025-01-14",
-    },
-  ];
-  const externalReports = [
-    {
-      id: 1,
-      h4: "مدخل في ادارة المشروعات الاصدار3",
-      p: "هذا التقرير يقدم نظرة شاملة على أساسيات إدارة المشروعات وفقًا لأحدث الممارسات والمعايير في إصداره الثالث.",
-      button: "تحميل",
-      history: "2025-01-14",
-    },
-  ];
-  const participants = [
-    {
-      id: 1,
-      h4: "تقرير الاعمال",
-      p: "يقدم تقرير الأعمال نظرة شاملة على أحدث مشاريع مرصد الباحة، متضمنًا الإنجازات والتطورات المستقبلية.",
-      button: "تحميل",
-      history: "2025-01-14",
-    },
-    {
-      id: 2,
-      h4: "تقرير اختباري للمشاركة",
-      p: "تقرير اختباري للمشاركة تقرير اختباري للمشاركة تقرير اختباري للمشاركة",
-      button: "تحميل",
-      history: "2025-01-14",
-    },
-  ];
+export async function CardsContainer() {
+  const reports = await getData("reports");
+
   return (
     <div className="bg-[#343537] rounded-2xl w-full text-white flex flex-col gap-2 pb-10">
-      <div className="p-10 rounded-2xl w-full text-white flex flex-col gap-6">
-        <h2 className="text-[30px] font-bold">تقاريرنا</h2>
-        <Cards reports={ourReports} />
-
-        <h2 className="text-[30px] font-bold">تقارير ودراسات خارجية </h2>
-        <Cards reports={externalReports} />
-
-        <h2 className="text-[30px] font-bold">مساهمات المشاركين </h2>
-        <Cards reports={participants} />
+      <div className="p-10 rounded-2xl w-full text-white flex flex-col gap-12">
+        {reports.map((item, index) => (
+          <div key={index} className="flex flex-col gap-4">
+            <h2 className="text-[30px] font-bold">{item.name1}</h2>
+            <Cards reports={item.mediaFiles} />
+          </div>
+        ))}
       </div>
 
-      <PaginationButton />
+      {/* <PaginationButton /> */}
     </div>
   );
 }
 
 const Cards = ({ reports }) => {
+  const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
   return (
     <div className="w-full flex gap-6">
       {reports.map((report) => (
@@ -76,20 +31,23 @@ const Cards = ({ reports }) => {
           className="bg-[#303031] rounded-lg p-5 flex flex-col justify-between gap-3 w-[450px] h-[210px]">
           <div className="flex">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#11504D] to-[#06A69C]"></div>
-            <h4 className="-ms-3 text-[24px]">{report.h4}</h4>
+            <h4 className="-ms-3 text-[24px]">{report.name1}</h4>
           </div>
-          <p className="text-[16px]">{report.p}</p>
+          <p className="text-[16px]">{report.description1}</p>
           <div className="w-full flex justify-between items-center">
-            <button className="bg-[#fff] px-5 py-2 rounded-lg text-black flex items-center gap-5 cursor-pointer">
-              <span className="text-[14px] font-bold">{report.button}</span>
+            <Link
+              target="_blank"
+              href={`${files_path} ${report.file}`}
+              className="bg-[#fff] px-5 py-2 rounded-lg text-black flex items-center gap-5 cursor-pointer">
+              <span className="text-[14px] font-bold">تحميل</span>
               <Image
                 src="/assets/reports/DownloadArrow.svg"
                 alt="arrow download"
                 width={25}
                 height={25}
               />
-            </button>
-            <span className="text-[14px]">{report.history}</span>
+            </Link>
+            <span className="text-[14px]">{report.publishDate}</span>
           </div>
         </div>
       ))}

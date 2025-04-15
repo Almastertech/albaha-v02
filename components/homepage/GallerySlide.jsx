@@ -29,7 +29,7 @@ export const GallerySlide = ({ data, index, setActiveSlide, Isactive }) => {
               Isactive ? "text-xl font-bold" : ""
             }`}>
             <span>{data.title}</span>
-            {Isactive && <GoToIcon />}
+            {/* {Isactive && <GoToIcon />} */}
           </h4>
           {Isactive && <span className="text-[10px]">{data.date}</span>}
         </div>

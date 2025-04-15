@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const FILES_PATH = process.env.NEXT_PUBLIC_FILES_PATH;
 
-const VerticalMarquee = ({ speed = 20, data }) => {
-  const duplicatedItems = [...data, ...data];
+const VerticalMarquee = ({ speed = 30, data }) => {
+  const duplicatedItems = [...data, ...data, ...data, ...data];
   function chunkIcons(data, chunkSize = 4) {
     const logos = data.map((item) => item.logo1).filter(Boolean); // only non-empty logos
     const chunks = [];
@@ -20,7 +20,7 @@ const VerticalMarquee = ({ speed = 20, data }) => {
   const modified_data = chunkIcons(duplicatedItems);
 
   return (
-    <div className="overflow-hidden w-full h-70 relative flex flex-col items-center">
+    <div className="h-[40vh] w-full overflow-hidden relative flex flex-col items-center">
       <motion.div
         className="flex flex-col "
         initial={{ y: 0 }}
@@ -33,11 +33,11 @@ const VerticalMarquee = ({ speed = 20, data }) => {
         {modified_data.map((item, index) => (
           <div
             key={index}
-            className=" flex items-center justify-between w-full gap-30 my-3">
+            className=" flex items-center justify-between h-full w-full gap-30 my-3">
             {item.map((subitem, index) => (
               <div
                 key={index}
-                className=" flex items-center justify-between w-full">
+                className=" flex items-center justify-between h-full w-full">
                 <Image
                   src={`${FILES_PATH}${subitem}`}
                   alt=""

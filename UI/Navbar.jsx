@@ -46,7 +46,11 @@ function Navbar({ showNav, setShowNav }) {
         <Lang_Search data={data} />
       </div>
 
-      <NavContainer showContainer={showContainer} curNav={curNav} />
+      <NavContainer
+        setShowContainer={setShowContainer}
+        showContainer={showContainer}
+        curNav={curNav}
+      />
     </nav>
   );
 }
@@ -93,7 +97,7 @@ const NavItem = ({ data, isActive, onClick }) => (
   </li>
 );
 
-const NavContainer = ({ showContainer, curNav }) => {
+const NavContainer = ({ showContainer, curNav, setShowContainer }) => {
   const path = usePathname();
   const isEnglish = path.includes("/en");
   return (
@@ -107,8 +111,12 @@ const NavContainer = ({ showContainer, curNav }) => {
             key={index}
             className={`hover:text-[#DED3B3] transition-all cursor-pointer text-lg w-[50%] border-white/5 ${
               isEnglish ? "border-r-2" : "border-l-2"
-            } py-1 px-10`}>
-            <Link target={item.target && item.target} href={item.href}>
+            }`}>
+            <Link
+              className=" py-1 px-10"
+              onClick={() => setShowContainer(false)}
+              target={item.target && item.target}
+              href={item.href}>
               {item.title}
             </Link>
           </li>
