@@ -1,6 +1,7 @@
 import Image from "next/image";
 export function LastNews({ data }) {
   const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
+
   return (
     <div className="bg-[#363B3E] w-full rounded-2xl p-12">
       <div className="w-full flex justify-center items-center gap-5">

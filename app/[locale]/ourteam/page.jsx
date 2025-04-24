@@ -10,8 +10,6 @@ function OurTeamPage() {
   );
 }
 
-export default OurTeamPage;
-
 const TeamsHeader = () => {
   return (
     <>
@@ -71,3 +69,5 @@ const TeamCards = async () => {
     </div>
   );
 };
+
+export default OurTeamPage;

@@ -72,7 +72,7 @@ export default function AlbahaStats({ data }) {
 const StatsImages = ({ currentArea, clickedArea }) => {
   const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
   const path = usePathname();
-  const isEnglish = path.startsWith("/en");
+  const isEnglish = path.includes("en");
 
   const images = isEnglish
     ? [

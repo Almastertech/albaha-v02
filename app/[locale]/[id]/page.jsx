@@ -4,8 +4,8 @@ import getData from "@/lib/api";
 
 async function LocationPage({ params }) {
   const states_data = await getData("govs");
-  const slug = params.id;
-  const currState = states_data.find((state) => state.state === slug);
+  const { id } = await params;
+  const currState = states_data.find((state) => state.state === id);
   return (
     <>
       <Hero states_data={states_data} data={currState} />

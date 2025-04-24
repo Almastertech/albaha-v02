@@ -3,46 +3,70 @@
     "nav_bar": {
       "nav_data": [
         {
-          "title": "Vision and Goals",
+          "title": "عن المرصد الحضري",
           "subnavs": [
             {
-              "title": "The Strategic Office for Al-Baha Region Development",
-              "href": "#"
+              "title": "المكتب الإستراتيجي لتطوير منطقة الباحة",
+              "href": "/albaha-page"
             },
-            { "title": "The Urban Observatory of Al-Baha Region", "href": "#" },
-            { "title": "The Team", "href": "#" },
-            { "title": "Data Request", "href": "#" },
-            { "title": "Content Management", "href": "#" },
-            { "title": "Our Partners", "href": "#" }
+
+            { "title": "فريق العمل", "href": "/ourteam" },
+            { "title": "طلب البيانات", "href": "/contact" },
+            {
+              "target": "_blank",
+              "title": "إدارة المحتوى",
+              "href": "http://34.166.121.10/Marsad/App"
+            },
+            { "title": "شركائنا", "href": "/#partners" }
           ]
         },
         {
-          "title": "Geography and Location",
+          "title": "الجغرافيا والمكان",
           "subnavs": [
-            { "title": "Al-Baha Region", "href": "#" },
-            { "title": "Al-Aqiq Governorate", "href": "#" },
-            { "title": "Al-Hajrah Governorate", "href": "#" },
-            { "title": "Al-Makhwah Governorate", "href": "#" },
-            { "title": "Al-Mandaq Governorate", "href": "#" },
-            { "title": "Baljurashi Governorate", "href": "#" },
-            { "title": "Bani Hassan Governorate", "href": "#" },
-            { "title": "Ghamid Al-Zinad Governorate", "href": "#" },
-            { "title": "Download Files", "href": "#" },
-            { "title": "Al-Qura Governorate", "href": "#" }
+            { "title": "منطقة الباحة", "target": "_blank", "href": "/baha" },
+            { "title": "محافظة العقيق", "target": "_blank", "href": "/akik" },
+            { "title": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+            {
+              "title": "محافظة المخواة",
+              "target": "_blank",
+              "href": "/makhwa"
+            },
+            { "title": "محافظة المندق", "target": "_blank", "href": "/mandak" },
+            {
+              "title": "محافظة بالجرشي",
+              "target": "_blank",
+              "href": "/balghrshy"
+            },
+            {
+              "title": "محافظة بني حسن",
+              "target": "_blank",
+              "href": "/banyhasan"
+            },
+            {
+              "title": "محافظة غامد الزناد",
+              "target": "_blank",
+              "href": "/ghamed"
+            },
+            { "title": "محافظة القرى", "target": "_blank", "href": "/kora" },
+            { "title": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
           ]
         },
         {
-          "title": "Urban Indicators of Al-Baha Region",
+          "title": "المؤشرات الحضرية لمنطقة الباحة",
           "subnavs": [
-            { "title": "Urban Indicators of Al-Baha Region", "href": "#" }
+            {
+              "title": "المؤشرات الحضرية لمنطقة الباحة",
+              "href": "http://34.166.121.10:7009/",
+              "target": "_blank"
+            }
           ]
         },
         {
-          "title": "Observatory News",
+          "title": "أخبار المرصد",
           "subnavs": [
-            { "title": "News", "href": "#" },
-            { "title": "Photos and Videos", "href": "#" },
-            { "title": "Observatory Library", "href": "#" }
+            { "title": "الأخبار", "href": "/news" },
+            { "title": "مكتبة المرصد", "href": "/images" },
+            { "title": "ملفات التحميل", "href": "/reports" }
           ]
         }
       ],
@@ -51,35 +75,35 @@
   },
   "homepage": {
     "hero": {
-      "title": "Monitoring Reality with a Future Vision",
-      "cta": "Urban Information Platform"
+      "title": "رصد الواقع بعين المستقبل",
+      "cta": "منصة المعلومات الحضرية"
     },
     "visions_and_goals": {
-      "title": "Vision and Goals",
+      "title": "الرؤية والأهداف",
       "visionsandgolas": [
         {
           "icon": "/assets/home/visions_and_goals/rocket-01.svg",
           "gold_icon": "/assets/home/visions_and_goals/rocket-01-gold.svg",
-          "title": "Our Goals",
-          "description": "Enhancing urban planning, monitoring regional development indicators, supporting investment efforts in the region, and building partnerships and agreements with development sectors in the region."
+          "title": "أهدافنا",
+          "description": "تعزيز التخطيط الحضري ، متابعة مؤشرات التنمية الإقليمية  ، دعم الجهود الاستثمارية في المنطقة ، بناء الشراكات والاتفاقيات مع القطاعات التنموية بالمنطقة."
         },
         {
           "icon": "/assets/home/visions_and_goals/vision.svg",
           "gold_icon": "/assets/home/visions_and_goals/vision-gold.svg",
-          "title": "Our Vision",
-          "description": "The Urban Observatory represents a pivotal step towards achieving a sustainable urban environment, contributing to improving quality of life and enhancing service levels for the residents of Al-Baha region."
+          "title": "رؤيتنا",
+          "description": "يمثل المرصد الحضري خطوة محورية نحو تحقيق بيئة حضرية مستدامة، ويسهم في رفع جودة الحياة والارتقاء بمستوى الخدمات لسكان منطقة الباحة."
         }
       ]
     },
     "mailing_list": {
-      "title": "Subscribe to the Mailing List",
-      "content": "Create an account to stay updated with the latest exciting news from Al-Baha and learn more about our events.",
-      "placeholder": "Enter your email to subscribe"
+      "title": "سجل في القائمة البريدية",
+      "content": "أنشئ حساب للاطلاع على آخر أخبار الباحة المشوقة والتعرّف أكثر على فعالياتنا",
+      "placeholder": "إدخل بريــــدك الإلــــــكتـــرونـي للإشـــتــــراك"
     },
     "partners": {
-      "title": "Success Partners",
-      "description": "We are proud of our partnership with over 200 local and global strategic partners, paving the way for a bright future.",
-      "cta": "View More",
+      "title": "شركاء النجاح",
+      "description": "نفتخر بشراكتنا مع +200 شراكة استراتيجية محلية وعالمية، تُمهد لمستقبل مشرق",
+      "cta": "مشاهدة المزيد",
       "partners_icons": [
         [
           "/assets/home/partners/البنك المركزي.svg",
@@ -114,64 +138,118 @@
       ]
     }
   },
+  "reports": {
+    "header": {
+      "title": "مكتبه المرصد",
+      "cta": "توفر مكتبة المرصد مجموعة من التقارير والوثائق التي تسلط الضوء على أحدث المشاريع، الدراسات، والإنجازات، مما يمنح الزوار نظرة معمقة على مسيرة التطوير والابتكار."
+    }
+  },
+  "images": {
+    "header": {
+      "title": "المكتبة",
+      "cta": "استكشف مجموعة من الصور والفيديوهات التي تعرض أحدث مشاريعنا، ورؤيتنا للتطوير، وكواليس العمل في مرصد الباحة. استمتع بجولة بصرية تبرز الجودة والابتكار الذي يميز أعمالنا."
+    }
+  },
   "news": {
     "header": {
-      "title": "Latest news and updates",
-      "description": "Stay up to date with the latest news, reports and updates about Al Baha Region Observatory."
+      "title": "آخر الأخبار والتحديثات",
+      "cta": "كن على اطلاع دائم بآخر الأخبار والتقارير والتحديثات حول مرصد منطقة الباحة."
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "لنتواصل مع مرصد الباحة",
+      "cta": "هل لديك أي استفسارات أو تساؤلات؟",
+      "cta2": " تواصل معنا - يسعدنا سماعك!"
+    }
+  },
+  "location": {
+    "hero": {
+      "title": "منطقة الباحة",
+      "description": "مدينة الباحة هي عاصمة منطقة الباحة ومقر الإمارة، ومن أهم مدن السعودية سياحيًا وزراعيًا، وإليها تنسب المنطقة ويتركز الثقل الإداري والتجاري. توجد بها دوائر حكومية ومراكز تجارية كبرى، إضافةً إلى أن بها أسواقا شعبية، أهمها: سوق الخميس.يبلغ عدد سكان الباحة تقريبا ٤٨٧,١٠٨ ألف نسمة يتوزعون على المدينة ومحافظاتها. يحيط بالمدينة غابات كثيرة، منها: غابة رغدان، وغابة الشهبة، ودار الجبل، والزرقاء، يحدها من الشمال محافظة القرى، ومن الغرب محافظة المندق، ومحافظة المخواة، ومن الجنوب محافظة بلجرشي، ومن الشرق محافظة العقيق."
+    },
+    "directions": {
+      "heading1": "منطقة الباحة",
+      "desc1": "ينتشر السكان بالمدينة وبعض الضواحي المحيطة بها والقرى ويعملون بالدوائر الحكومية والسلك العسكري والبعض بالزراعة والتجارة والتعليم.",
+      "heading2": "الموقع",
+      "desc2": "تقع مدينة الباحة في الجنوب الغربي من المملكة العربية السعودية وتمثل موقعًا وسطاً بين مناطق سياحية."
     }
   },
   "footer": {
     "sections": [
       {
-        "title": "Vision and Goals",
+        "title": "عن المرصد الحضري",
         "links": [
           {
-            "text": "Strategic Office for Al-Baha Region Development",
-            "href": "#"
+            "text": "المكتب الإستراتيجي لتطوير منطقة الباحة",
+            "href": "/albaha-page"
           },
-          { "text": "Vision and Goals", "href": "#" },
-          { "text": "Urban Observatory for Al-Baha Region", "href": "#" },
-          { "text": "Team", "href": "#" },
-          { "text": "Data Request", "href": "#" },
-          { "text": "Content Management", "href": "#" },
-          { "text": "Our Partners", "href": "#" }
+          { "text": "فريق العمل", "href": "/ourteam" },
+          { "text": "طلب البيانات", "href": "/contact" },
+          {
+            "text": "إدارة المحتوي",
+            "href": "http://34.166.121.10/Marsad/App",
+            "target": "_blank"
+          },
+          { "text": "شركائنا", "href": "/#partners" }
         ]
       },
       {
-        "title": "Geography and Location",
+        "title": "الجغرافيا والمكان",
         "links": [
-          { "text": "Al-Baha Region", "href": "#" },
-          { "text": "Ghamid Al-Zinad Governorate", "href": "#" },
-          { "text": "Al-Aqiq Governorate", "href": "#" },
-          { "text": "Qilwah Governorate", "href": "#" },
-          { "text": "Al-Hajrah Governorate", "href": "#" },
-          { "text": "Al-Makhwah Governorate", "href": "#" },
-          { "text": "Baljurashi Governorate", "href": "#" },
-          { "text": "Al-Mandaq Governorate", "href": "#" },
-          { "text": "Bani Hasan Governorate", "href": "#" }
+          { "text": "منطقة الباحة", "target": "_blank", "href": "/baha" },
+          { "text": "محافظة العقيق", "target": "_blank", "href": "/akik" },
+          { "text": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+          {
+            "text": "محافظة المخواة",
+            "target": "_blank",
+            "href": "/makhwa"
+          },
+          { "text": "محافظة المندق", "target": "_blank", "href": "/mandak" },
+          {
+            "text": "محافظة بالجرشي",
+            "target": "_blank",
+            "href": "/balghrshy"
+          },
+          {
+            "text": "محافظة بني حسن",
+            "target": "_blank",
+            "href": "/banyhasan"
+          },
+          {
+            "text": "محافظة غامد الزناد",
+            "target": "_blank",
+            "href": "/ghamed"
+          },
+          { "text": "محافظة القرى", "target": "_blank", "href": "/kora" },
+          { "text": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
         ]
       },
       [
         {
-          "title": "Urban Indicators for Al-Baha Region",
+          "title": "المؤشرات الحضرية لمنطقة الباحة",
           "links": [
-            { "text": "Urban Indicators for Al-Baha Region", "href": "#" }
+            {
+              "text": "المؤشرات الحضرية لمنطقة الباحة",
+              "href": "http://34.166.121.10:7009/",
+              "target": "_blank"
+            }
           ]
         },
         {
-          "title": "Observatory Library",
+          "title": "مكتبة المرصد",
           "links": [
-            { "text": "Observatory News", "href": "#" },
-            { "text": "Photos and Videos", "href": "#" },
-            { "text": "Observatory Reports", "href": "#" }
+            { "text": "أخبار المرصد", "href": "/news" },
+            { "text": "الصور والفيديوهات", "href": "/images" },
+            { "text": "تقارير المرصد", "href": "/reports" }
           ]
         }
       ]
     ],
     "bottom": [
-      { "title": "Privacy Policy", "href": "#" },
-      { "title": "Cookie Policies", "href": "#" }
+      { "title": "سياسة الخصوصية", "href": "#" },
+      { "title": "سياسات ملفات تعريف الإرتباط", "href": "#" }
     ],
-    "copy": "All rights reserved © The Strategic Office for the Development of Al-Baha Region"
+    "copy": "جميع الحقوق محفوظة ©للمكتـــب الاستـــراتيجي لتطــوير منطــقة البـــاحــة"
   }
 }
