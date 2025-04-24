@@ -29,7 +29,7 @@ export default function AlbahaStats({ data }) {
   }
 
   const handleTimeUpdate = () => {
-    if (videoRef.current.currentTime >= 0 && !fadeOut) {
+    if (videoRef.current.currentTime >= 13 && !fadeOut) {
       setFadeOut(true);
       setShowContent(true);
     }
