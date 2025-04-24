@@ -114,6 +114,12 @@
       ]
     }
   },
+  "news": {
+    "header": {
+      "title": "Latest news and updates",
+      "description": "Stay up to date with the latest news, reports and updates about Al Baha Region Observatory."
+    }
+  },
   "footer": {
     "sections": [
       {

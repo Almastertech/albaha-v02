@@ -446,7 +446,7 @@ const Diamond = ({
     initial={!selectedDiamond ? { y: data.order <= 9 ? -100 : 100 } : false}
     animate={activateAnimation && { y: 0 }}
     transition={{ duration: 1, delay: 0.4 }}
-    className={`relative cursor-pointer xl:w-[120px] xl:h-[120px] lg:w-[90px] lg:h-[90px] mx-6 transform transition-all duration-[0.5s] ease-out ${
+    className={`relative cursor-pointer xl:w-[120px] xl:h-[120px] lg:w-[80px] lg:h-[80px] md:w-[70px] md:h-[70px] mx-2 2xl:mx-6 transform transition-all duration-[0.5s] ease-out ${
       data.order > 9 ? "-my-12 hover:translate-y-3" : "hover:-translate-y-3"
     }`}>
     <div
@@ -462,7 +462,7 @@ const Diamond = ({
             : "opacity-50"
           : "opacity-100"
       } flex items-center justify-center  text-center `}>
-      <p className="text-white text-sm p-4">{data.name.arabic}</p>
+      <p className="text-white text-xs lg:text-sm p-4">{data.name.arabic}</p>
     </div>
   </motion.div>
 );

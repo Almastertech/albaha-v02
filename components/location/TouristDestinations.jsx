@@ -6,7 +6,7 @@ export const TouristDestinations = ({ data }) => {
       <section className="bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/assets/location/AlbahaFagr.jpg')] bg-center bg-cover h-[90vh] flex justify-center items-center gap-10 px-16">
         <div className="basis-[48%] flex flex-col justify-center items-start gap-10">
           <div className="flex flex-col gap-3 text-white">
-            <h2 className="text-2xl">{data.name.arabic}</h2>
+            <h2 className="text-2xl">{data?.name.arabic}</h2>
             <p className="text-lg">{data?.description}</p>
           </div>
           <div className="flex flex-col gap-3 text-white">
@@ -14,7 +14,7 @@ export const TouristDestinations = ({ data }) => {
             <p className="text-lg">{data?.desc2}</p>
           </div>
           <div className="flex items-center flex-wrap gap-12 text-white">
-            {data.sectorIndicators.map((info) => (
+            {data?.sectorIndicators.map((info) => (
               <div key={info.id} className="flex flex-col gap-2">
                 <div className="flex items-center gap-3">
                   <p className="text-lg font-bold">{info.name.arabic}</p>

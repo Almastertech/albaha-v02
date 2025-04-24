@@ -2,7 +2,7 @@ import Image from "next/image";
 export function LastNews({ data }) {
   const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
   return (
-    <div className="bg-[#363B3E] w-full rounded-2xl p-20">
+    <div className="bg-[#363B3E] w-full rounded-2xl p-12">
       <div className="w-full flex justify-center items-center gap-5">
         <div className="w-full h-1 bg-white rounded-2xl"></div>
         <h3 className="text-[27px] text-white text-nowrap">آخر الأخبار</h3>

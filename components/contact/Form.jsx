@@ -40,7 +40,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="w-[80%] mx-auto flex flex-col gap-10 md:flex-row bg-[#232629] text-white p-5">
+    <div className="w-[80%] h-fit mx-auto flex flex-col gap-10 md:flex-row bg-[#232629] text-white p-5">
       {/* Form */}
       <div className="md:w-1/2 flex flex-col justify-center pe-4 py-4">
         <h1 className="text-3xl font-bold mb-8 text-start">طلب بيانات</h1>
@@ -48,7 +48,7 @@ export const Form = () => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col gap-6 justify-between">
+          className="flex flex-col gap-3 justify-between">
           {/* Name Field */}
           <div className="flex flex-col items-start w-full">
             <label htmlFor="name" className="mb-1 text-sm">
@@ -58,7 +58,7 @@ export const Form = () => {
               type="text"
               id="name"
               {...register("Name", { required: "الاسم مطلوب" })}
-              className="w-full p-2 rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
+              className="w-full rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
             />
             {errors.Name && (
               <span className="text-red-500 mt-3 text-sm">
@@ -82,7 +82,7 @@ export const Form = () => {
                   message: "رقم غير صالح",
                 },
               })}
-              className="w-full p-2 rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
+              className="w-full rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
             />
             {errors.Phone && (
               <span className="text-red-500 mt-3 text-sm">
@@ -106,7 +106,7 @@ export const Form = () => {
                   message: "بريد إلكتروني غير صالح",
                 },
               })}
-              className="w-full p-2 rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
+              className="w-full rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
             />
             {errors.Email && (
               <span className="text-red-500 mt-3 text-sm">
@@ -124,7 +124,7 @@ export const Form = () => {
               type="text"
               id="job"
               {...register("Job", { required: "الوظيفة مطلوبة" })}
-              className="w-full p-2 rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
+              className="w-full rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
             />
             {errors.Job && (
               <span className="text-red-500 mt-3 text-sm">
@@ -140,9 +140,9 @@ export const Form = () => {
             </label>
             <textarea
               id="description"
-              rows={4}
+              rows={2}
               {...register("Description", { required: "الوصف مطلوب" })}
-              className="w-full resize-none p-2 rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
+              className="w-full resize-none rounded border border-white/50 focus:outline-none focus:ring-2 focus:ring-[#fff]/75 text-right"
             />
             {errors.Description && (
               <span className="text-red-500 mt-3 text-sm">

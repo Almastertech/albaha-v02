@@ -9,7 +9,7 @@ async function LocationPage({ params }) {
   return (
     <>
       <Hero states_data={states_data} data={currState} />
-      <TouristDestinations data={currState} />
+      {/* <TouristDestinations data={currState} /> */}
     </>
   );
 }

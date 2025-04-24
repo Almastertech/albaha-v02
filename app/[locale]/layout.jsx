@@ -14,18 +14,22 @@ export const metadata = {
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale)) {
-    notFound();
-  }
+  // if (!routing.locales.includes(locale)) {
+  //   notFound();
+  // }
 
   const messages = await getMessages();
   return (
     <html lang={locale} dir={locale.includes("ar") ? "rtl" : "ltr"}>
-      <NextIntlClientProvider messages={messages}>
-        <body className="overflow-x-hidden text-xl">
+      <body className="overflow-x-hidden text-xl">
+        <NextIntlClientProvider messages={messages}>
           <ScrollableArea>{children}</ScrollableArea>
-        </body>
-      </NextIntlClientProvider>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }

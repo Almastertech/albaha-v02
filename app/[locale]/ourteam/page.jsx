@@ -4,6 +4,17 @@ import Image from "next/image";
 function OurTeamPage() {
   return (
     <section className="bg-[#011616] pt-36">
+      <TeamsHeader />
+      <TeamCards />
+    </section>
+  );
+}
+
+export default OurTeamPage;
+
+const TeamsHeader = () => {
+  return (
+    <>
       <div className="flex items-center px-24">
         <Image
           src="/assets/ourteam/Square.svg"
@@ -21,12 +32,9 @@ function OurTeamPage() {
           التميز والابتكار. اكتشف المزيد عن فريقنا ودوره في تحقيق رؤيتنا!
         </p>
       </div>
-      <TeamCards />
-    </section>
+    </>
   );
-}
-
-export default OurTeamPage;
+};
 
 const TeamCards = async () => {
   const team_data = await getData("teams");
@@ -52,7 +60,11 @@ const TeamCards = async () => {
             <h3 className="text-xl font-bold pb-4 mb-8 relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[30%] before:h-1 before:rounded-lg before:bg-[#11504D]">
               {item.title}
             </h3>
-            <p className="text-lg">{item.content1}</p>
+            <div
+              className="text-lg"
+              dangerouslySetInnerHTML={{ __html: item.content1 }}
+            />
+            {/* <p className="text-lg">{item.content1}</p> */}
           </div>
         </div>
       ))}

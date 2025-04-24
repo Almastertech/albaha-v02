@@ -12,6 +12,7 @@ import { StatsBackgroundVideo } from "./StatsBackgroundVideo";
 import { CloudsLayer } from "./CloudsLayer";
 import { Mapping } from "./Mapping";
 import { albaha_states_data, default_states_data } from "./albaha_states_data";
+import { usePathname } from "next/navigation";
 
 export default function AlbahaStats({ data }) {
   const [showContent, setShowContent] = useState(false);
@@ -53,11 +54,7 @@ export default function AlbahaStats({ data }) {
           fadeOut={fadeOut}
         />
         {showContent && (
-          <StatsImages
-            currentArea={currentArea}
-            data={data}
-            clickedArea={clickedArea}
-          />
+          <StatsImages currentArea={currentArea} clickedArea={clickedArea} />
         )}
         <ContentOverlay
           setClickedArea={setClickedArea}
@@ -72,8 +69,116 @@ export default function AlbahaStats({ data }) {
   );
 }
 
-const StatsImages = ({ currentArea, data, clickedArea }) => {
+const StatsImages = ({ currentArea, clickedArea }) => {
   const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
+  const path = usePathname();
+  const isEnglish = path.startsWith("/en");
+
+  const images = isEnglish
+    ? [
+        {
+          image: "/assets/location/AreaEn/Al-Eaqiq.png",
+          name: "Al Aqiq",
+          state: "akik",
+        },
+        {
+          image: "/assets/location/AreaEn/Al-Hujra_.png",
+          name: "Al Hujrah",
+          state: "hogra",
+        },
+        {
+          image: "/assets/location/AreaEn/Al-Qury.png",
+          name: "Al Qura",
+          state: "kora",
+        },
+        {
+          image: "/assets/location/AreaEn/Al-Makhawaa.png",
+          name: "Al Makhwah",
+          state: "makhwa",
+        },
+        {
+          image: "/assets/location/AreaEn/Al- Mandaq_.png",
+          name: "Al Mandaq",
+          state: "mandak",
+        },
+        {
+          image: "/assets/location/AreaEn/Beljurashi.png",
+          name: "Baljurashi",
+          state: "balghrshy",
+        },
+        {
+          image: "/assets/location/AreaEn/Beni  Hassan_.png",
+          name: "Bani Hasan",
+          state: "banyhasan",
+        },
+        {
+          image: "/assets/location/AreaEn/Ghamid  Al-Zanad.png",
+          name: "Ghamid Al-Zinad",
+          state: "ghamed",
+        },
+        {
+          image: "/assets/location/AreaEn/Qalwa.png",
+          name: "Qilwah",
+          state: "kalwa",
+        },
+        {
+          image: "/assets/location/AreaEn/Al-Baha_.png",
+          name: "Al Baha",
+          state: "baha",
+        },
+      ]
+    : [
+        {
+          image: "/assets/location/Area/العقيق.png",
+          name: "العقيق",
+          state: "akik",
+        },
+        {
+          image: "/assets/location/Area/الحجرة.png",
+          name: "محافظة الحجرة",
+          state: "hogra",
+        },
+        {
+          image: "/assets/location/Area/القري.png",
+          name: "محافظة القرى",
+          state: "kora",
+        },
+        {
+          image: "/assets/location/Area/المخواة.png",
+          name: "محافظة المخواة",
+          state: "makhwa",
+        },
+        {
+          image: "/assets/location/Area/المندق.png",
+          name: "محافظة المندق",
+          state: "mandak",
+        },
+        {
+          image: "/assets/location/Area/بلجراشي.png",
+          name: "محافظة بلجرشي",
+          state: "balghrshy",
+        },
+        {
+          image: "/assets/location/Area/بنى  حسن.png",
+          name: "محافظة بنى حسن",
+          state: "banyhasan",
+        },
+        {
+          image: "/assets/location/Area/غامد الزناد.png",
+          name: "محافظة غامد الزناد",
+          state: "ghamed",
+        },
+        {
+          image: "/assets/location/Area/قلوة.png",
+          name: "محافظة قلوة",
+          state: "kalwa",
+        },
+        {
+          image: "/assets/location/Area/الباحة.png",
+          name: "الباحة (مقر الإمارة)",
+          state: "baha",
+        },
+      ];
 
   return (
     <AnimatePresence>
@@ -97,9 +202,9 @@ const StatsImages = ({ currentArea, data, clickedArea }) => {
           />
         </motion.div>
 
-        {data.map((state) => (
+        {images.map((state) => (
           <motion.div
-            key={state.name.arabic}
+            key={state.name}
             initial={{ opacity: 0 }}
             animate={{
               opacity:
@@ -114,8 +219,8 @@ const StatsImages = ({ currentArea, data, clickedArea }) => {
             }}
             className="absolute inset-0">
             <Image
-              src={`${files_path}${state.url}`}
-              alt={state.name.arabic || "state name"}
+              src={state.image}
+              alt={state.name}
               fill
               priority
               className="object-cover object-center"
