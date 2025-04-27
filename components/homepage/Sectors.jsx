@@ -394,7 +394,7 @@ const Diamonds = ({
       className={`w-full h-full pb-20 transform transition-all duration-[0.7s] absolute flexify  ${
         activateAnimation
           ? selectedDiamond?.order <= 9
-            ? "translate-y-30"
+            ? "translate-y-15"
             : selectedDiamond?.order > 9
             ? "-translate-y-50"
             : "-translate-y-26"
@@ -489,7 +489,7 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
           <p className="">{selectedDiamond.description1}</p>
         </div>
         {selectedDiamond.sectorIndicators.length > 0 && (
-          <div className="flex items-start h-[160px]  flex-wrap">
+          <div className="flex items-start h-fit  flex-wrap">
             {selectedDiamond?.sectorIndicators.map((item, index) => (
               <StateInfo key={index} data={item} />
             ))}

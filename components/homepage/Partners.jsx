@@ -14,7 +14,7 @@ function Partners({ data }) {
             نفتخر بشراكتنا مع +200 شراكة استراتيجية محلية وعالمية، تُمهد لمستقبل
             مشرق
           </p>
-          <Button> مشاهدة المزيد</Button>
+          {/* <Button> مشاهدة المزيد</Button> */}
         </div>
 
         <VerticalMarquee data={data} />

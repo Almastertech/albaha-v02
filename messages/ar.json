@@ -23,32 +23,32 @@
         {
           "title": "الجغرافيا والمكان",
           "subnavs": [
-            { "title": "منطقة الباحة", "target": "_blank", "href": "/baha" },
-            { "title": "محافظة العقيق", "target": "_blank", "href": "/akik" },
-            { "title": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+            { "title": "محافظة الباحة", "href": "/baha" },
+            { "title": "محافظة العقيق", "href": "/akik" },
+            { "title": "محافظة الحجره", "href": "/hogra" },
             {
               "title": "محافظة المخواة",
-              "target": "_blank",
+
               "href": "/makhwa"
             },
-            { "title": "محافظة المندق", "target": "_blank", "href": "/mandak" },
+            { "title": "محافظة المندق", "href": "/mandak" },
             {
               "title": "محافظة بالجرشي",
-              "target": "_blank",
+
               "href": "/balghrshy"
             },
             {
               "title": "محافظة بني حسن",
-              "target": "_blank",
+
               "href": "/banyhasan"
             },
             {
               "title": "محافظة غامد الزناد",
-              "target": "_blank",
+
               "href": "/ghamed"
             },
-            { "title": "محافظة القرى", "target": "_blank", "href": "/kora" },
-            { "title": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
+            { "title": "محافظة القرى", "href": "/kora" },
+            { "title": "محافظة قلوة", "href": "/kalwa" }
           ]
         },
         {
@@ -159,7 +159,7 @@
   "contact": {
     "header": {
       "title": "لنتواصل مع مرصد الباحة",
-      "cta": "هل لديك أي استفسارات أو تساؤلات؟",
+      "cta": "",
       "cta2": " تواصل معنا - يسعدنا سماعك!"
     }
   },

@@ -40,7 +40,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="w-[80%] h-fit mx-auto flex flex-col gap-10 md:flex-row bg-[#232629] text-white p-5">
+    <div className="w-[80%] h-fit mx-auto flex flex-col gap-10 md:flex-row bg-[#232629] text-white p-5 rounded-xl mb-20">
       {/* Form */}
       <div className="md:w-1/2 flex flex-col justify-center pe-4 py-4">
         <h1 className="text-3xl font-bold mb-8 text-start">طلب بيانات</h1>
