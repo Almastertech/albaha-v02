@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import BtnIcon from "../../public/assets/home/mailing_list/Button-Main-5.svg";
 import { useEffect, useState } from "react";
 
-function MailingForm() {
+function MailingForm({ placeholder }) {
   const [email, setEmail] = useState("");
   const [res, setRes] = useState(null);
   const [error, setError] = useState(null);
@@ -56,7 +56,7 @@ function MailingForm() {
           }}
           type="email"
           required
-          placeholder="إدخل بريــــدك الإلــــــكتـــرونـي للإشـــتــــراك"
+          placeholder={placeholder}
           className="bg-white text-black w-full focus:outline-none px-4 py-1"
         />
         <div className=" cursor-pointer flexify text-black p-1.5">

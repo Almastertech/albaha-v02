@@ -10,7 +10,7 @@ import { Link } from "@/i18n/navigation";
 
 const FILES_PATH = process.env.NEXT_PUBLIC_FILES_PATH;
 
-export const AlbahaReports = ({ data }) => {
+export const AlbahaReports = ({ data, isEnglish }) => {
   const flickityOptions = {
     initialIndex: 4,
     wrapAround: true,
@@ -30,9 +30,13 @@ export const AlbahaReports = ({ data }) => {
   return (
     <div className="w-full px-12   flex flex-col gap-4">
       <div className="w-full flex items-center justify-between">
-        <h3 className="text-2xl font-bold ">تقارير المرصد </h3>
+        <h3 className="text-2xl font-bold">
+          {isEnglish ? "Observatory Reports" : "تقارير المرصد"}
+        </h3>
         <Button>
-          <Link href={"/reports"}>مشاهدة المزيد</Link>
+          <Link href="/reports">
+            {isEnglish ? "View More" : "مشاهدة المزيد"}
+          </Link>
         </Button>
       </div>
 
@@ -49,7 +53,7 @@ export const AlbahaReports = ({ data }) => {
             key={index}
             target="_blank"
             className="px-5 grow hover:text-blue-600 hover:underline transition-colors duration-300 cursor-pointer text-lg font-bold">
-            {item.name1}
+            {item.name}
           </a>
         ))}
       </Flickity>

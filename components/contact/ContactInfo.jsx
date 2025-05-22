@@ -1,29 +1,32 @@
+"use client";
+import { useLanguage } from "@/context/languageContext";
 import Image from "next/image";
 
 function ContactInfo() {
+  const { isEnglish } = useLanguage();
   const contact = [
     {
       id: 1,
       image: "/assets/contact/Email.svg",
       alt: "Email icon",
-      title: "البريد الالكتروني",
+      title: isEnglish ? "Email" : "البريد الالكتروني",
       p: "Info@gmail.com",
     },
     {
       id: 2,
       image: "/assets/contact/Location.svg",
-      alt: "location icon",
-      title: "الموقع",
-      p: "الباحه",
+      alt: "Location icon",
+      title: isEnglish ? "Location" : "الموقع",
+      p: isEnglish ? "Al Baha" : "الباحه",
     },
     {
       id: 3,
-      title: "تابعونا على",
+      title: isEnglish ? "Follow Us" : "تابعونا على",
       socialMedia: [
         {
           id: 1,
           image: "/assets/contact/X.svg",
-          alt: "X-twiter icon",
+          alt: "X-twitter icon",
           w: 15,
           h: 15,
         },
@@ -37,17 +40,20 @@ function ContactInfo() {
         {
           id: 2,
           image: "/assets/contact/FaceBook.svg",
-          alt: "FaceBook icon",
+          alt: "Facebook icon",
           w: 10,
           h: 10,
         },
       ],
     },
   ];
+
   return (
     <div className="w-full flex flex-col gap-16">
-      <h3 className="text-[28px] text-white text-start">بيانات الاتصال</h3>
-      <ContactMethod contact={contact} />
+      <h3 className="text-[28px] text-white text-start">
+        {isEnglish ? "Contact Information" : "بيانات الاتصال"}
+      </h3>
+      <ContactMethod contact={contact} isEnglish={isEnglish} />
       <div className="w-full rounded-2xl">
         <iframe
           allowFullScreen
@@ -64,25 +70,26 @@ function ContactInfo() {
 
 export default ContactInfo;
 
-const ContactMethod = ({ contact }) => {
+const ContactMethod = ({ contact, isEnglish }) => {
   return (
-    <div className="w-[60%] flex justify-between items-center gap-20">
+    <div
+      className={`w-[60%] flex justify-between items-center gap-20 ${
+        isEnglish ? "flex-row" : "flex-row-reverse"
+      }`}>
       {contact.map((method) => (
         <div
           key={method.id}
-          className={`${method.id != 3 ? "flex items-center gap-5" : ""}`}>
+          className={`${method.id !== 3 ? "flex items-center gap-5" : ""}`}>
           {method.image && (
             <Image src={method.image} alt={method.alt} width={20} height={20} />
           )}
           <div
             className={`flex flex-col justify-center ${
-              method.id != 3 ? "gap-3" : "gap-5"
+              method.id !== 3 ? "gap-3" : "gap-5"
             } text-white`}>
             <p className="text-[20px]">{method.title}</p>
             {method.p ? (
-              <>
-                <p className="text-[14px]">{method.p}</p>
-              </>
+              <p className="text-[14px]">{method.p}</p>
             ) : (
               <div className="flex items-center gap-5">
                 {method.socialMedia.map((social) => (

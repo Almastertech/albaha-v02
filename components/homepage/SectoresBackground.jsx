@@ -29,18 +29,17 @@ const SectoresBackground = ({ selectedDiamond, activateAnimation, data }) => {
 
         {data.map((diamond) => (
           <motion.div
-            key={diamond.name.arabic}
+            key={diamond.name}
             initial={{ opacity: 0 }}
             animate={{
-              opacity:
-                diamond.name.arabic === selectedDiamond?.name.arabic ? 1 : 0,
+              opacity: diamond.name === selectedDiamond?.name ? 1 : 0,
               transition: { duration: 0.5 },
             }}
             exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.2 } }}
             className="absolute inset-0 z-10">
             <Image
               src={`${FILES_PATH}${diamond.picUrl}`}
-              alt={diamond.name.arabic}
+              alt={diamond.name}
               fill
               priority
               className="object-cover"

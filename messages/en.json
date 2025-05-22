@@ -3,74 +3,57 @@
     "nav_bar": {
       "nav_data": [
         {
-          "title": "عن المرصد الحضري",
+          "title": "About the Urban Observatory",
           "subnavs": [
             {
-              "title": "المكتب الإستراتيجي لتطوير منطقة الباحة",
+              "title": "Strategic Office for the Development of Al-Baha Region",
               "href": "/albaha-page"
             },
-
-            { "title": "فريق العمل", "href": "/ourteam" },
-            { "title": "طلب البيانات", "href": "/contact" },
+            { "title": "Our Team", "href": "/ourteam" },
+            { "title": "Data Request", "href": "/contact" },
             {
               "target": "_blank",
-              "title": "إدارة المحتوى",
+              "title": "Content Management",
               "href": "http://34.166.121.10/Marsad/App"
             },
-            { "title": "شركائنا", "href": "/#partners" }
+            { "title": "Our Partners", "href": "/#partners" }
           ]
         },
         {
-          "title": "الجغرافيا والمكان",
+          "title": "Geography and Places",
           "subnavs": [
-            { "title": "منطقة الباحة", "target": "_blank", "href": "/baha" },
-            { "title": "محافظة العقيق", "target": "_blank", "href": "/akik" },
-            { "title": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
-            {
-              "title": "محافظة المخواة",
-              "target": "_blank",
-              "href": "/makhwa"
-            },
-            { "title": "محافظة المندق", "target": "_blank", "href": "/mandak" },
-            {
-              "title": "محافظة بالجرشي",
-              "target": "_blank",
-              "href": "/balghrshy"
-            },
-            {
-              "title": "محافظة بني حسن",
-              "target": "_blank",
-              "href": "/banyhasan"
-            },
-            {
-              "title": "محافظة غامد الزناد",
-              "target": "_blank",
-              "href": "/ghamed"
-            },
-            { "title": "محافظة القرى", "target": "_blank", "href": "/kora" },
-            { "title": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
+            { "title": "Al-Baha Governorate", "href": "/baha" },
+            { "title": "Al-Aqiq Governorate", "href": "/akik" },
+            { "title": "Al-Hujrah Governorate", "href": "/hogra" },
+            { "title": "Al-Makhwah Governorate", "href": "/makhwa" },
+            { "title": "Al-Mandaq Governorate", "href": "/mandak" },
+            { "title": "Baljurashi Governorate", "href": "/balghrshy" },
+            { "title": "Bani Hassan Governorate", "href": "/banyhasan" },
+            { "title": "Ghamid Al-Zinad Governorate", "href": "/ghamed" },
+            { "title": "Al-Qura Governorate", "href": "/kora" },
+            { "title": "Qilwah Governorate", "href": "/kalwa" }
           ]
         },
         {
-          "title": "المؤشرات الحضرية لمنطقة الباحة",
+          "title": "Urban Indicators for Al-Baha Region",
           "subnavs": [
             {
-              "title": "المؤشرات الحضرية لمنطقة الباحة",
+              "title": "Urban Indicators for Al-Baha Region",
               "href": "http://34.166.121.10:7009/",
               "target": "_blank"
             }
           ]
         },
         {
-          "title": "أخبار المرصد",
+          "title": "Observatory News",
           "subnavs": [
-            { "title": "الأخبار", "href": "/news" },
-            { "title": "مكتبة المرصد", "href": "/images" },
-            { "title": "ملفات التحميل", "href": "/reports" }
+            { "title": "News", "href": "/news" },
+            { "title": "Observatory Library", "href": "/images" },
+            { "title": "Download Files", "href": "/reports" }
           ]
         }
       ],
-      "lang_switch": ""
+      "lang_switch": "AR"
     }
   },
   "homepage": {
@@ -96,13 +79,13 @@
       ]
     },
     "mailing_list": {
-      "title": "سجل في القائمة البريدية",
-      "content": "أنشئ حساب للاطلاع على آخر أخبار الباحة المشوقة والتعرّف أكثر على فعالياتنا",
-      "placeholder": "إدخل بريــــدك الإلــــــكتـــرونـي للإشـــتــــراك"
+      "title": "Subscribe to the Mailing List",
+      "content": "Create an account to stay updated with the latest exciting news from Al-Baha and learn more about our events.",
+      "placeholder": "Enter your email to subscribe"
     },
     "partners": {
-      "title": "شركاء النجاح",
-      "description": "نفتخر بشراكتنا مع +200 شراكة استراتيجية محلية وعالمية، تُمهد لمستقبل مشرق",
+      "title": "Success Partners",
+      "description": "We are proud of our partnership with over 200 local and global strategic alliances, paving the way for a bright future",
       "cta": "مشاهدة المزيد",
       "partners_icons": [
         [
@@ -140,116 +123,132 @@
   },
   "reports": {
     "header": {
-      "title": "مكتبه المرصد",
-      "cta": "توفر مكتبة المرصد مجموعة من التقارير والوثائق التي تسلط الضوء على أحدث المشاريع، الدراسات، والإنجازات، مما يمنح الزوار نظرة معمقة على مسيرة التطوير والابتكار."
+      "title": "Observatory Library",
+      "cta": "The Observatory Library offers a collection of reports and documents highlighting the latest projects, studies, and achievements, providing visitors with an in-depth look into the journey of development and innovation."
     }
   },
   "images": {
     "header": {
-      "title": "المكتبة",
-      "cta": "استكشف مجموعة من الصور والفيديوهات التي تعرض أحدث مشاريعنا، ورؤيتنا للتطوير، وكواليس العمل في مرصد الباحة. استمتع بجولة بصرية تبرز الجودة والابتكار الذي يميز أعمالنا."
+      "title": "Library",
+      "cta": "Explore a collection of images and videos showcasing our latest projects, development vision, and behind-the-scenes work at the Albaha Observatory. Enjoy a visual tour that reflects the quality and innovation in our work."
     }
   },
   "news": {
     "header": {
-      "title": "آخر الأخبار والتحديثات",
-      "cta": "كن على اطلاع دائم بآخر الأخبار والتقارير والتحديثات حول مرصد منطقة الباحة."
+      "title": "Latest News and Updates",
+      "cta": "Stay up to date with the latest news, reports, and updates about the Albaha Region Observatory."
     }
   },
   "contact": {
     "header": {
-      "title": "لنتواصل مع مرصد الباحة",
-      "cta": "هل لديك أي استفسارات أو تساؤلات؟",
-      "cta2": " تواصل معنا - يسعدنا سماعك!"
+      "title": "Get in Touch with Albaha Observatory",
+      "cta": "",
+      "cta2": "Contact us – we’d love to hear from you!"
     }
   },
   "location": {
     "hero": {
-      "title": "منطقة الباحة",
-      "description": "مدينة الباحة هي عاصمة منطقة الباحة ومقر الإمارة، ومن أهم مدن السعودية سياحيًا وزراعيًا، وإليها تنسب المنطقة ويتركز الثقل الإداري والتجاري. توجد بها دوائر حكومية ومراكز تجارية كبرى، إضافةً إلى أن بها أسواقا شعبية، أهمها: سوق الخميس.يبلغ عدد سكان الباحة تقريبا ٤٨٧,١٠٨ ألف نسمة يتوزعون على المدينة ومحافظاتها. يحيط بالمدينة غابات كثيرة، منها: غابة رغدان، وغابة الشهبة، ودار الجبل، والزرقاء، يحدها من الشمال محافظة القرى، ومن الغرب محافظة المندق، ومحافظة المخواة، ومن الجنوب محافظة بلجرشي، ومن الشرق محافظة العقيق."
+      "title": "Albaha Region",
+      "description": "Albaha City is the capital of the Albaha Region and the seat of the emirate. It is one of Saudi Arabia's most important cities in terms of tourism and agriculture. The region is named after it and holds the administrative and commercial center. It hosts government offices, major commercial centers, and traditional markets, the most notable being Thursday Market. Albaha has a population of approximately 487,108 residents spread across the city and its governorates. It is surrounded by numerous forests such as Raghadan, Shahba, Dar Al-Jabal, and Zarqa. It borders Al-Qura Governorate to the north, Al-Mandaq and Al-Mukhwah to the west, Baljurashi to the south, and Al-Aqiq to the east."
     },
     "directions": {
-      "heading1": "منطقة الباحة",
-      "desc1": "ينتشر السكان بالمدينة وبعض الضواحي المحيطة بها والقرى ويعملون بالدوائر الحكومية والسلك العسكري والبعض بالزراعة والتجارة والتعليم.",
-      "heading2": "الموقع",
-      "desc2": "تقع مدينة الباحة في الجنوب الغربي من المملكة العربية السعودية وتمثل موقعًا وسطاً بين مناطق سياحية."
+      "heading1": "Albaha Region",
+      "desc1": "Residents are spread across the city, nearby suburbs, and villages. Many work in government sectors, the military, agriculture, trade, and education.",
+      "heading2": "Location",
+      "desc2": "Albaha City is located in the southwest of Saudi Arabia and serves as a central point among various tourist destinations."
     }
   },
   "footer": {
     "sections": [
       {
-        "title": "عن المرصد الحضري",
+        "title": "About the Urban Observatory",
         "links": [
           {
-            "text": "المكتب الإستراتيجي لتطوير منطقة الباحة",
+            "text": "Strategic Office for the Development of Al-Baha Region",
             "href": "/albaha-page"
           },
-          { "text": "فريق العمل", "href": "/ourteam" },
-          { "text": "طلب البيانات", "href": "/contact" },
+          { "text": "Our Team", "href": "/ourteam" },
+          { "text": "Data Request", "href": "/contact" },
           {
-            "text": "إدارة المحتوي",
+            "text": "Content Management",
             "href": "http://34.166.121.10/Marsad/App",
             "target": "_blank"
           },
-          { "text": "شركائنا", "href": "/#partners" }
+          { "text": "Our Partners", "href": "/#partners" }
         ]
       },
       {
-        "title": "الجغرافيا والمكان",
+        "title": "Geography and Places",
         "links": [
-          { "text": "منطقة الباحة", "target": "_blank", "href": "/baha" },
-          { "text": "محافظة العقيق", "target": "_blank", "href": "/akik" },
-          { "text": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+          { "text": "Al-Baha Region", "href": "/baha" },
           {
-            "text": "محافظة المخواة",
-            "target": "_blank",
+            "text": "Al-Aqiq Governorate",
+
+            "href": "/akik"
+          },
+          {
+            "text": "Al-Hujrah Governorate",
+
+            "href": "/hogra"
+          },
+          {
+            "text": "Al-Makhwah Governorate",
+
             "href": "/makhwa"
           },
-          { "text": "محافظة المندق", "target": "_blank", "href": "/mandak" },
           {
-            "text": "محافظة بالجرشي",
-            "target": "_blank",
+            "text": "Al-Mandaq Governorate",
+
+            "href": "/mandak"
+          },
+          {
+            "text": "Baljurashi Governorate",
+
             "href": "/balghrshy"
           },
           {
-            "text": "محافظة بني حسن",
-            "target": "_blank",
+            "text": "Bani Hassan Governorate",
+
             "href": "/banyhasan"
           },
           {
-            "text": "محافظة غامد الزناد",
-            "target": "_blank",
+            "text": "Ghamid Al-Zinad Governorate",
+
             "href": "/ghamed"
           },
-          { "text": "محافظة القرى", "target": "_blank", "href": "/kora" },
-          { "text": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
+          {
+            "text": "Al-Qura Governorate",
+
+            "href": "/kora"
+          },
+          { "text": "Qilwah Governorate", "href": "/kalwa" }
         ]
       },
       [
         {
-          "title": "المؤشرات الحضرية لمنطقة الباحة",
+          "title": "Urban Indicators for Al-Baha Region",
           "links": [
             {
-              "text": "المؤشرات الحضرية لمنطقة الباحة",
+              "text": "Urban Indicators for Al-Baha Region",
               "href": "http://34.166.121.10:7009/",
               "target": "_blank"
             }
           ]
         },
         {
-          "title": "مكتبة المرصد",
+          "title": "Observatory Library",
           "links": [
-            { "text": "أخبار المرصد", "href": "/news" },
-            { "text": "الصور والفيديوهات", "href": "/images" },
-            { "text": "تقارير المرصد", "href": "/reports" }
+            { "text": "Observatory News", "href": "/news" },
+            { "text": "Images and Videos", "href": "/images" },
+            { "text": "Observatory Reports", "href": "/reports" }
           ]
         }
       ]
     ],
     "bottom": [
-      { "title": "سياسة الخصوصية", "href": "#" },
-      { "title": "سياسات ملفات تعريف الإرتباط", "href": "#" }
+      { "title": "Privacy Policy", "href": "#" },
+      { "title": "Cookie Policy", "href": "#" }
     ],
-    "copy": "جميع الحقوق محفوظة ©للمكتـــب الاستـــراتيجي لتطــوير منطــقة البـــاحــة"
+    "copy": "All rights reserved © Strategic Office for the Development of Al-Baha Region"
   }
 }

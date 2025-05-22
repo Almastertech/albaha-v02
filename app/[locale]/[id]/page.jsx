@@ -1,15 +1,36 @@
+"use client";
 import { Hero } from "@/components/location/Hero";
-import { TouristDestinations } from "@/components/location/TouristDestinations";
+import { useLanguage } from "@/context/languageContext";
 import getData from "@/lib/api";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
-async function LocationPage({ params }) {
-  const states_data = await getData("govs");
-  const { id } = await params;
-  const currState = states_data.find((state) => state.state === id);
+function LocationPage() {
+  const { isEnglish } = useLanguage();
+  const params = useParams();
+  const { id } = params;
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getData(`govs`, isEnglish ? "en" : "ar");
+      setData(result);
+    };
+    fetchData();
+  }, [isEnglish]);
+
+  if (!data)
+    return (
+      <div className="h-screen bg-black text-white text-4xl font-bold flexify">
+        {isEnglish ? "Loading..." : "جارٍ التحميل..."}
+      </div>
+    );
+
+  const currState = data?.find((state) => state.state === id);
+
   return (
     <>
-      <Hero states_data={states_data} data={currState} />
-      {/* <TouristDestinations data={currState} /> */}
+      <Hero states_data={data} data={currState} />
     </>
   );
 }

@@ -8,7 +8,7 @@ const Diamond = ({
   isActive,
 }) => (
   <motion.div
-    key={selectedDiamond ? selectedDiamond.name.arabic : "default"}
+    key={selectedDiamond ? selectedDiamond.name : "default"}
     onClick={() => {
       setSelectedDiamond(data);
     }}
@@ -31,7 +31,7 @@ const Diamond = ({
             : "opacity-50"
           : "opacity-100"
       } flex items-center justify-center  text-center `}>
-      <p className="text-white text-xs lg:text-sm p-4">{data.name.arabic}</p>
+      <p className="text-white text-xs lg:text-sm p-4">{data.name}</p>
     </div>
   </motion.div>
 );

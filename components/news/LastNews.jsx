@@ -1,14 +1,18 @@
 import Image from "next/image";
-export function LastNews({ data }) {
+
+export function LastNews({ data, isEnglish }) {
   const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
 
   return (
     <div className="bg-[#363B3E] w-full rounded-2xl p-12">
       <div className="w-full flex justify-center items-center gap-5">
         <div className="w-full h-1 bg-white rounded-2xl"></div>
-        <h3 className="text-[27px] text-white text-nowrap">آخر الأخبار</h3>
+        <h3 className="text-[27px] text-white text-nowrap">
+          {isEnglish ? "Latest News" : "آخر الأخبار"}
+        </h3>
         <div className="w-full h-1 bg-white rounded-2xl"></div>
       </div>
+
       <div className="w-full bg-[#232629] rounded-lg overflow-hidden shadow-lg mt-5">
         <div className="relative h-48">
           <Image
@@ -26,12 +30,15 @@ export function LastNews({ data }) {
           <p className="text-sm">{data.start}</p>
           <p className="mt-2 text-lg">{data.content}</p>
           <button className="mt-4 bg-white text-black py-2 px-4 rounded flex gap-3">
-            <span className="text-lg">اقرأ المزيد</span>
+            <span className="text-lg">
+              {isEnglish ? "Read More" : "اقرأ المزيد"}
+            </span>
             <Image
               src="/assets/news/ReadMoreArrow.svg"
               alt="Read More Arrow"
               width={20}
               height={20}
+              className={`${isEnglish && "rotate-180"} `}
             />
           </button>
         </div>

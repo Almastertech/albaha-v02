@@ -1,18 +1,49 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/context/languageContext";
 
 export const HeroSlide = () => {
+  const { isEnglish } = useLanguage();
+
   const images = [
     "/assets/location/AlbahaLocation.jpeg",
     "/assets/location/AlbahaFagr.jpg",
     "/assets/location/DJI_0205.jpg",
     "/assets/location/DJI_0788.jpg",
   ];
-  const Info = [
-    { id: 1, h: "التنمية", p: "تحقيق تنمية متوازنة ومستدامة في منطقة الباحة" },
-    { id: 2, h: "التطوير", p: "تنفيذ الاستراتيجية الشاملة لتطوير المنطقة" },
-    { id: 3, h: "الأستثمار", p: "تحفيز مشاركة القطاع الخاص في تطوير المنطقة" },
-  ];
+
+  const Info = isEnglish
+    ? [
+        {
+          id: 1,
+          h: "Development",
+          p: "Achieving balanced and sustainable development in Albaha region",
+        },
+        {
+          id: 2,
+          h: "Improvement",
+          p: "Implementing the comprehensive strategy for developing the region",
+        },
+        {
+          id: 3,
+          h: "Investment",
+          p: "Encouraging private sector participation in developing the region",
+        },
+      ]
+    : [
+        {
+          id: 1,
+          h: "التنمية",
+          p: "تحقيق تنمية متوازنة ومستدامة في منطقة الباحة",
+        },
+        { id: 2, h: "التطوير", p: "تنفيذ الاستراتيجية الشاملة لتطوير المنطقة" },
+        {
+          id: 3,
+          h: "الأستثمار",
+          p: "تحفيز مشاركة القطاع الخاص في تطوير المنطقة",
+        },
+      ];
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -31,14 +62,14 @@ export const HeroSlide = () => {
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out bg-cover bg-center ${
             currentSlide === index ? "opacity-100 z-10" : "opacity-0 z-0"
-          } `}
+          }`}
           style={{ backgroundImage: `url(${src})` }}
         />
       ))}
 
       {/* Dots */}
       <div
-        className="absolute z-[999] -bottom-1 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-3 w-1/2 h-16 bg-[#232629]"
+        className="absolute z-[99] -bottom-1 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-3 w-1/2 h-16 bg-[#232629]"
         style={{
           clipPath: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)",
         }}>
@@ -56,16 +87,18 @@ export const HeroSlide = () => {
       </div>
 
       {/* Content */}
-      <div className="absolute z-20 inset-0 flex items-center bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))] bg-opacity-50 text-white">
+      <div className="absolute z-10 inset-0 flex items-center bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))] bg-opacity-50 text-white">
         <div className="flex flex-col justify-center items-start gap-10 ms-20 w-[70%]">
           <div className="flex flex-col gap-3 text-white w-[70%]">
-            <h2 className="text-3xl">المكتب الاستراتيجي لتطوير منطقة الباحة</h2>
+            <h2 className="text-3xl">
+              {isEnglish
+                ? "The Strategic Office for the Development of Albaha Region"
+                : "المكتب الاستراتيجي لتطوير منطقة الباحة"}
+            </h2>
             <p className="text-lg">
-              انطلاقًا من اهتمام القيادة بتنمية جميع مناطق المملكة واستغلال
-              مواردها وتعزيز ميزاتها التنافسية، صدر الأمر السامي الكريم رقم
-              (61856) بتاريخ 1443/10/02 هـ بتأسيس المكتب الاستراتيجي لتطوير
-              منطقة الباحة. يعمل المكتب على تنفيذ الاستراتيجية الشاملة للتنمية
-              وفق رؤية طموحة.
+              {isEnglish
+                ? `In line with the leadership's commitment to the development of all regions of the Kingdom, and to leverage their resources and enhance their competitive advantages, Royal Decree No. (61856) dated 1443/10/02 was issued to establish the Strategic Office for the Development of the Albaha Region. The office works on implementing a comprehensive development strategy based on an ambitious vision.`
+                : `انطلاقًا من اهتمام القيادة بتنمية جميع مناطق المملكة واستغلال مواردها وتعزيز ميزاتها التنافسية، صدر الأمر السامي الكريم رقم (61856) بتاريخ 1443/10/02 هـ بتأسيس المكتب الاستراتيجي لتطوير منطقة الباحة. يعمل المكتب على تنفيذ الاستراتيجية الشاملة للتنمية وفق رؤية طموحة.`}
             </p>
           </div>
           <div className="flex items-center justify-center gap-12 text-white">

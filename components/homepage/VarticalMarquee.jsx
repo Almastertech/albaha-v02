@@ -8,7 +8,7 @@ const FILES_PATH = process.env.NEXT_PUBLIC_FILES_PATH;
 const VerticalMarquee = ({ speed = 30, data }) => {
   const duplicatedItems = [...data, ...data, ...data, ...data];
   function chunkIcons(data, chunkSize = 4) {
-    const logos = data.map((item) => item.logo1).filter(Boolean); // only non-empty logos
+    const logos = data.map((item) => item.logo).filter(Boolean); // only non-empty logos
     const chunks = [];
 
     for (let i = 0; i < logos.length; i += chunkSize) {

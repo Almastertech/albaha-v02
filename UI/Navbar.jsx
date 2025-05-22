@@ -33,7 +33,7 @@ function Navbar({ showNav, setShowNav }) {
         setActiveIndex(10);
         setCurNav([]);
       }}
-      className={`fixed transition-all duration-[0.35s]   text-sm px-14  text-white z-50 top-0 w-full ${
+      className={`fixed transition-all duration-[0.35s]   text-sm px-14  text-white z-100 top-0 w-full ${
         showNav ? "bg-[#1E2123]/[0.85] backdrop-blur-2xl" : "bg-transparent "
       }`}>
       <div className="flex items-center justify-between relative z-50">
@@ -132,11 +132,15 @@ const Lang_Search = ({ data }) => {
   return (
     <div className="flexify gap-10">
       {/* <SeachIcon className="scale-80" /> */}
-      <div
-        // href={path.startsWith("/ar") ? "/en" : "/ar"}
+      <a
+        href={
+          path.startsWith("/ar")
+            ? path.replace("ar", "en")
+            : path.replace("en", "ar")
+        }
         className="cursor-pointer">
         {data.lang_switch}
-      </div>
+      </a>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import Button from "@/UI/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { StateInfo } from "./StateInfo";
 
-const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
+const DiamondInfo = ({ activateAnimation, selectedDiamond, isEnglish }) => {
   if (selectedDiamond)
     return (
       <motion.div
@@ -19,9 +19,9 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
         }  transition-all duration-300`}>
         <div className="flexify self-start gap-4 mb-4">
           <span className="text-[#DED3B3] font-bold">
-            {selectedDiamond.name.arabic}
+            {selectedDiamond.name}
           </span>
-          <p className="">{selectedDiamond.description1}</p>
+          <p className="">{selectedDiamond.description}</p>
         </div>
         {selectedDiamond.sectorIndicators.length > 0 && (
           <div className="flex items-start h-fit  flex-wrap">
@@ -31,7 +31,9 @@ const DiamondInfo = ({ activateAnimation, selectedDiamond }) => {
           </div>
         )}
 
-        <Button className={`mt-3`}>مشاهدة المزيد</Button>
+        <Button className="mt-3">
+          {isEnglish ? "View More" : "مشاهدة المزيد"}
+        </Button>
       </motion.div>
     );
   else return;

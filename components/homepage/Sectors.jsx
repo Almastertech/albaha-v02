@@ -6,6 +6,7 @@ import { useState } from "react";
 import Diamonds from "./Diamonds";
 import DiamondInfo from "./DiamondsInof";
 import SectoresBackground from "./SectoresBackground";
+import { useLanguage } from "@/context/languageContext";
 
 // const sameInfo = [
 //   {
@@ -283,6 +284,7 @@ function Sectors({ data }) {
   const [activateAnimation, setActivateAnimation] = useState(false);
   const [selectedDiamond, setSelectedDiamond] = useState(null);
 
+  const { isEnglish } = useLanguage();
   const handleReset = () => {
     setSelectedDiamond(null);
   };
@@ -290,16 +292,19 @@ function Sectors({ data }) {
   return (
     <section className="snap-start  text-white relative flex flex-col gap-0 h-screen s-10">
       <div className="relative w-full h-full z-30 bg-black/50">
-        <LineTitle className={`m-24 mt-30 mx-50 mb-0 z-30`}>
-          القطاعات التنموية
-        </LineTitle>
-        {selectedDiamond && (
-          <div
-            onClick={handleReset}
-            className="absolute left-30 top-30 cursor-pointer z-10">
-            عودة
-          </div>
-        )}
+        <div dir="rtl">
+          <LineTitle className="m-24 mt-30 mx-50 mb-0 z-30">
+            {isEnglish ? "Development Sectors" : "القطاعات التنموية"}
+          </LineTitle>
+
+          {selectedDiamond && (
+            <div
+              onClick={handleReset}
+              className="absolute left-30 top-30 cursor-pointer z-10">
+              {isEnglish ? "Back" : "عودة"}
+            </div>
+          )}
+        </div>
 
         <Diamonds
           data={data}
@@ -309,6 +314,7 @@ function Sectors({ data }) {
           setActivateAnimation={setActivateAnimation}
         />
         <DiamondInfo
+          isEnglish={isEnglish}
           activateAnimation={activateAnimation}
           selectedDiamond={selectedDiamond}
         />

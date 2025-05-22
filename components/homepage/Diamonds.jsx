@@ -37,7 +37,7 @@ const Diamonds = ({
             data={item}
             activateAnimation={activateAnimation}
             selectedDiamond={selectedDiamond}
-            isActive={item?.name.arabic === selectedDiamond?.name.arabic}
+            isActive={item?.name === selectedDiamond?.name}
           />
         ))}
       </div>
@@ -50,7 +50,7 @@ const Diamonds = ({
             data={item}
             activateAnimation={activateAnimation}
             selectedDiamond={selectedDiamond}
-            isActive={item?.name.arabic === selectedDiamond?.name.arabic}
+            isActive={item?.name === selectedDiamond?.name}
           />
         ))}
       </div>

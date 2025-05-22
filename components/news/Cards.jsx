@@ -2,18 +2,18 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export const Cards = ({ data }) => {
+export const Cards = ({ isEnglish, data }) => {
   const newsData = data;
   return (
     <div className="flex flex-wrap gap-10">
       {newsData.map((card) => (
-        <Card key={card.id} card={card} />
+        <Card isEnglish={isEnglish} key={card.id} card={card} />
       ))}
     </div>
   );
 };
 
-const Card = ({ card }) => {
+const Card = ({ card, isEnglish }) => {
   const files_path = process.env.NEXT_PUBLIC_FILES_PATH;
   const [showContent, setShowContent] = useState(false);
 
@@ -49,13 +49,20 @@ const Card = ({ card }) => {
               }}
               className="bg-white text-black py-2 px-4 rounded flex items-center justify-center gap-3 cursor-pointer">
               <span className="text-sm text-nowrap">
-                {showContent ? "إخفاء" : "اقرأ المزيد"}
+                {showContent
+                  ? isEnglish
+                    ? "Hide"
+                    : "إخفاء"
+                  : isEnglish
+                  ? "Read more"
+                  : "اقرأ المزيد"}
               </span>
               <Image
                 src="/assets/news/ReadMoreArrow.svg"
                 alt="Read More Arrow"
                 width={15}
                 height={15}
+                className={`${isEnglish && "rotate-180"}`}
               />
             </div>
           )}

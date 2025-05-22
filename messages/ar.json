@@ -70,7 +70,7 @@
           ]
         }
       ],
-      "lang_switch": ""
+      "lang_switch": "EN"
     }
   },
   "homepage": {
@@ -197,32 +197,32 @@
       {
         "title": "الجغرافيا والمكان",
         "links": [
-          { "text": "منطقة الباحة", "target": "_blank", "href": "/baha" },
-          { "text": "محافظة العقيق", "target": "_blank", "href": "/akik" },
-          { "text": "محافظة الحجره", "target": "_blank", "href": "/hogra" },
+          { "text": "منطقة الباحة", "href": "/baha" },
+          { "text": "محافظة العقيق", "href": "/akik" },
+          { "text": "محافظة الحجره", "href": "/hogra" },
           {
             "text": "محافظة المخواة",
-            "target": "_blank",
+
             "href": "/makhwa"
           },
-          { "text": "محافظة المندق", "target": "_blank", "href": "/mandak" },
+          { "text": "محافظة المندق", "href": "/mandak" },
           {
             "text": "محافظة بالجرشي",
-            "target": "_blank",
+
             "href": "/balghrshy"
           },
           {
             "text": "محافظة بني حسن",
-            "target": "_blank",
+
             "href": "/banyhasan"
           },
           {
             "text": "محافظة غامد الزناد",
-            "target": "_blank",
+
             "href": "/ghamed"
           },
-          { "text": "محافظة القرى", "target": "_blank", "href": "/kora" },
-          { "text": "محافظة قلوة", "target": "_blank", "href": "/kalwa" }
+          { "text": "محافظة القرى", "href": "/kora" },
+          { "text": "محافظة قلوة", "href": "/kalwa" }
         ]
       },
       [
