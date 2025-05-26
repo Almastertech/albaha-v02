@@ -30,7 +30,7 @@ function LocationPage() {
 
   return (
     <>
-      <Hero states_data={data} data={currState} />
+      <Hero states_data={data} data={currState} isEnglish={isEnglish} />
     </>
   );
 }
